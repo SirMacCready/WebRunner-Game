@@ -1,15 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div class="zone">
-    div
-  </div>
-  <div class="floor"></div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .zone {
+    position: relative;
+    height: 25%;
+  }
+
+  .zone .container {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .floor {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: brown;
+    height: 75%;
+  }
+
+  .container {
+    height: 100%;
+    width: 62px;
+    display: flex;
+    align-items: flex-end;
+
+  }
+  .container img {
+    position: relative;
+    width: 62px;
+    height: 62px;
+  }
+
+  .jump {
+    animation: jump 0.3s ease-out, 0.3s landing 0.3s ease-in;
+  }
+
+  @keyframes jump {
+    0% {
+      bottom: 0;
+    }
+    100% {
+      bottom: 70px; 
+    }
+  }
+
+  @keyframes landing {
+    0% {
+      bottom: 70px;
+    }
+
+    100% {
+      bottom: 0px;
+    }
+  }
+</style>
+  <body>
+    <div class="zone">
+      <div class="container">
+          <img src="./player-rpg.png" alt="The dinosaur." class="image">
+      </div>
+      <div class="A"></div>
+    </div>
+    <div class="floor"></div>
+    <script>  
+      const rpg = document.querySelector(".image");
+
+      function jump() {
+        if (!rpg.classList.contains("jump")) {
+          console.log("ok")
+          rpg.classList.add("jump");
+        }
+        setTimeout(function () {
+          rpg.classList.remove("jump");
+        }, 600)
+      }
+
+      document.addEventListener("keydown", function(event) {
+        jump();
+      })
+
+    </script>
+  </body>
 </html>
