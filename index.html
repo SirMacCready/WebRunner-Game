@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
-    width: 806px;
+    width: 896px;
     height: 410px;
   }
 
@@ -37,7 +37,7 @@
     display: flex;
     position: relative;
     width: 100%;
-    height: 124px;
+    height: 128px;
     bottom: 0;
     background-color: aqua;
     
@@ -49,7 +49,7 @@
     background-color: lightblue;
     flex-direction: row;
     width: 100%;  
-    height: 124px;
+    height: 128px;
   }
 
   .game .zone .container,
@@ -58,8 +58,8 @@
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    height: 124px;
-    width: 62px;
+    height: 128px;
+    width: 64px;
     display: flex;
     align-items: flex-end;
   }
@@ -67,8 +67,8 @@
   .game .zone .player {
     position: absolute;
     bottom: 0;
-    width: 62px;
-    height: 62px;
+    width: 64px;
+    height: 64px;
 
   }
 
@@ -82,14 +82,14 @@
   }
 
   .game .zone .division .container > div {
-    width: 62px;
-    height: 62px;
+    width: 64px;
+    height: 64px;
   }
 
   .game .zone .player .image {
     position: relative;
-    width: 62px;
-    height: 62px;
+    width: 64px;
+    height: 64px;
     z-index: 999;
   }
 
@@ -103,16 +103,16 @@
   }
 
   .jump {
-    animation: jump 0.3s ease-out, 0.3s landing 0.3s ease-in;
+    animation: jump 0.75s ease-out, 0.75s landing .75s ease-in;
   }
 
   .chosenone {
     border: 1px solid black;
     /* animation: horizontal-scroll 5s linear !important; */
   }
-  .chosenone .image {
-    width: 62px;
-    height: 62px;
+  .chosenone .cactus {
+    width: 64px;
+    height: 64px;
     object-fit: cover;
     object-position: center;
   }
@@ -122,13 +122,13 @@
       bottom: 0;
     }
     100% {
-      bottom: 62px; 
+      bottom: 112px; 
     }
   }
 
   @keyframes landing {
     0% {
-      bottom: 62px;
+      bottom: 112px;
     }
 
     100% {
@@ -136,22 +136,22 @@
     }
   }
 
-  @keyframes horizontal-scroll {
+  /* @keyframes horizontal-scroll {
     0% {
-        right: -62px;
+        right: -64px;
     }
 
     100% {
-        right: 806px;
+        right: 896px;
     }
-  }
+  } */
 
   @keyframes translation {
     0% {
-        right: 0;
+        right: 64px;
     }
     100% {
-        right: 806px;
+        right: 896px;
     }
   }
 </style>
@@ -164,63 +164,55 @@
                 </div>
 
                 <section class="division">
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container A">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container A">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container A">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container A">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container B">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container A">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container A">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container A">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container C">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container A">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
+                    <div class="container A">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
                     </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-                    <div class="container">
-                        <div class="box"></div>
-                        <div class="box"></div>
-                    </div>
-                    <div class="container chosenone">
+                    <div class="container B">
                         <div class="box1">
                         </div>
                         <div class="box2">
-                            <img src="./assets/cactus.png" alt="The cactus image." class="image">
+                            <img src="./assets/cactus.png" alt="The cactus image." class="cactus">
                         </div>
                     </div>
                 </section>
@@ -232,18 +224,25 @@
 
       function jump() {
         if (!rpg.classList.contains("jump")) {
-          console.log("ok")
           rpg.classList.add("jump");
+          setTimeout(function () {
+            rpg.classList.remove("jump");
+          }, 2250)
         }
-        setTimeout(function () {
-          rpg.classList.remove("jump");
-        }, 600)
       }
 
       document.addEventListener("keydown", function(event) {
         jump();
       })
 
-    </script>
+      const downObstacle = document.querySelectorAll(".container.B")
+
+      downObstacle.forEach((obstacle) {
+        image = document.createElement("img")
+        image.src = ""
+        box = obstacle.querySelector(".box2");
+      })
+     </script>
+    <script href="./scripts/editSaveJSON.js"></script>
     </body>
 </html>
