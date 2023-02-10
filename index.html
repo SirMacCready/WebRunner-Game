@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
-  <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
   * {
     margin: 0;
     padding: 0;
@@ -14,47 +14,107 @@
   }
 
   body, html {
-    display: block;
-    width: 100%;
-    height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
   }
 
-  .zone {
+  .game {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
-    height: 25%;
+    width: 806px;
+    height: 410px;
   }
 
-  .zone .container {
+  .game .zone {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 124px;
+    bottom: 0;
+    background-color: aqua;
+    
+  }
+
+  .game .zone .division {
+    position: relative;
+    display: flex;
+    background-color: lightblue;
+    flex-direction: row;
+    width: 100%;  
+    height: 124px;
+  }
+
+  .game .zone .container,
+  .game .zone .player {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     bottom: 0;
-  }
-
-  .floor {
-    position: relative;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: brown;
-    height: 75%;
-  }
-
-  .container {
-    height: 100%;
+    height: 124px;
     width: 62px;
     display: flex;
     align-items: flex-end;
+  }
+
+  .game .zone .player {
+    position: absolute;
+    bottom: 0;
+    width: 62px;
+    height: 62px;
 
   }
-  .container img {
+
+  .game .zone .division .container {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0);
+    animation: translation 5s linear;
+  }
+
+  .game .zone .division .container > div {
     width: 62px;
     height: 62px;
   }
 
+  .game .zone .player .image {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    z-index: 999;
+  }
+
+
+  .game .floor {
+    position: relative;
+    bottom: 0;
+    background-color: brown;
+    height: 200px;
+    width: 100%;
+  }
+
   .jump {
     animation: jump 0.3s ease-out, 0.3s landing 0.3s ease-in;
+  }
+
+  .chosenone {
+    border: 1px solid black;
+    /* animation: horizontal-scroll 5s linear !important; */
+  }
+  .chosenone .image {
+    width: 62px;
+    height: 62px;
+    object-fit: cover;
+    object-position: center;
   }
 
   @keyframes jump {
@@ -62,29 +122,112 @@
       bottom: 0;
     }
     100% {
-      bottom: 70px; 
+      bottom: 62px; 
     }
   }
 
   @keyframes landing {
     0% {
-      bottom: 70px;
+      bottom: 62px;
     }
 
     100% {
       bottom: 0px;
     }
   }
+
+  @keyframes horizontal-scroll {
+    0% {
+        right: -62px;
+    }
+
+    100% {
+        right: 806px;
+    }
+  }
+
+  @keyframes translation {
+    0% {
+        right: 0;
+    }
+    100% {
+        right: 806px;
+    }
+  }
 </style>
-  <body>
-    <div class="zone">
-      <div class="container">
-          <img src="./player-rpg.png" alt="The dinosaur." class="image">
-      </div>
-      <div class="A"></div>
-    </div>
-    <div class="floor"></div>
-    <script>  
+    <body>
+        <div class="game">
+            <div class="zone">
+                <div class="player">
+                    <img src="./assets/player-rpg.png" alt="The dinosaur."
+                        class="image">
+                </div>
+
+                <section class="division">
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container chosenone">
+                        <div class="box1">
+                        </div>
+                        <div class="box2">
+                            <img src="./assets/cactus.png" alt="The cactus image." class="image">
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="floor"></div>
+        </div>
+        <script>  
       const rpg = document.querySelector(".image");
 
       function jump() {
@@ -102,5 +245,5 @@
       })
 
     </script>
-  </body>
+    </body>
 </html>
