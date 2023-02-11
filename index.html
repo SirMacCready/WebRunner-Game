@@ -296,10 +296,14 @@
 
       document.addEventListener("keydown", function(e) {
         if (e.keyCode === 32 || e.keyCode === 38 || e.keyCode === 90) {
-            jump(1500);
+            if (!rpg.classList.contains("crouch")) {
+              jump(1500);
+            }
             return;
         } else if (e.keyCode === 40 || e.keyCode === 83) {
-            crouch();
+            if (!rpg.classList.contains("jump")) {
+              crouch();
+            }
             return;
         }
       })
@@ -307,7 +311,6 @@
       
       function jump(time) {
         if (!rpg.classList.contains("jump")) {
-          console.log("jump")
           runner.style.display = "none";
           jumper.style.display = "block"
           jump1.style.display = "block";
@@ -336,6 +339,7 @@
             rpg.classList.remove("jump");
           }, (time + 200))
         }
+        return
       }
       
       function crouch() {
@@ -353,6 +357,7 @@
             document.removeEventListener("keyup", keyup);
           }
         }
+        return
       }
       
       
