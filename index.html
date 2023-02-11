@@ -53,7 +53,7 @@
     position: relative;
     width: 64px;
     height: 64px;
-    z-index: 999;
+    /* z-index: 999; */
   }
 
    .game .zone .player-rpg.jump {
@@ -195,14 +195,11 @@
       <div class="zone">
         <div class="player-rpg" id="player-rpg">
           <img src="./assets/images/runner/runner_sat.png" alt="Crouch runner."
-            class="croucher" style="display: none; ;">
+            class="croucher" style="display: none;">
           <div class="jumper">
-            <img src="./assets/images/runner/runner_jump1.png" alt="Jumping
-              runner." class="jump1" style="display: none;">
-            <img src="./assets/images/runner/runner_jump2.png" alt="Bouncing
-              runner." class="jump2" style="display: none;">
-            <img src="./assets/images/runner/runner_jump3.png" alt="Landing
-              runner." class="jump3" style="display: none;">
+            <img src="./assets/images/runner/runner_jump1.png" alt="Jumping runner." class="jump1" style="display: none;">
+            <img src="./assets/images/runner/runner_jump2.png" alt="Bouncing runner." class="jump2" style="display: none;">
+            <img src="./assets/images/runner/runner_jump3.png" alt="Landing runner." class="jump3" style="display: none;">
           </div>
           <div class="runner" id="runner">
             <img src="./assets/images/runner/runner_cours1.png" alt="A part of
@@ -298,62 +295,67 @@
 
 
       document.addEventListener("keydown", function(e) {
-          if (e.keyCode === 32 || e.keyCode === 38 || e.keyCode === 90) {
-              jump(1500);
-          } else if (e.keyCode === 40 || e.keyCode === 83) {
-              crouch();
-          }
+        if (e.keyCode === 32 || e.keyCode === 38 || e.keyCode === 90) {
+            jump(1500);
+            return;
+        } else if (e.keyCode === 40 || e.keyCode === 83) {
+            crouch();
+            return;
+        }
       })
 
+      
       function jump(time) {
-          let timelapse = parseInt(time);
-          if (!rpg.classList.contains("jump")) {
-              console.log("ok")
-              runner.style.display = "none";
-              jump1.style.display = "block";
-              jump2.style.display = "none";
-              jump3.style.display = "none";
-              rpg.classList.add("jump");
-              setTimeout(function() {
-                  runner.style.display = "none";
-                  jump1.style.display = "none";
-                  jump2.style.display = "block";
-                  jump3.style.dispplay = "none";
-              }, (timelapse / 2))
-              setTimeout(function() {
-                  runner.style.display = "none";
-                  jump1.style.display = "none";
-                  jump2.style.display = "none";
-                  jump3.style.display = "block";
-              }, timelapse)
-              setTimeout(function() {
-                  runner.style.display = "block";
-                  jump1.style.display = "none";
-                  jump2.style.display = "none";
-                  jump3.style.display = "none"
-                  rpg.classList.remove("jump");
-              }, (timelapse + 200))
-          }
-      }
+        if (!rpg.classList.contains("jump")) {
+          console.log("jump")
+          runner.style.display = "none";
+          jumper.style.display = "block"
+          jump1.style.display = "block";
+          jump2.style.display = "none";
+          jump3.style.display = "none";
+          rpg.classList.add("jump");
+          console.log(jump1.style.display);
+          setTimeout(function() {
+            runner.style.display = "none";
+            jump1.style.display = "none";
+            jump2.style.display = "block";
+            jump3.style.dispplay = "none";
 
+          }, (time/2))
+          setTimeout(function() {
+            runner.style.display = "none";
+            jump1.style.display = "none";
+            jump2.style.display = "none";
+            jump3.style.display = "block";
+          }, time)
+          setTimeout(function() {
+            runner.style.display = "block";
+            jump1.style.display = "none";
+            jump2.style.display = "none";
+            jump3.style.display = "none"
+            rpg.classList.remove("jump");
+          }, (time + 200))
+        }
+      }
+      
       function crouch() {
         if (!rpg.classList.contains("crouch")) {
-          console.log("ok");
           runner.style.display = "none";
           jumper.style.display = "none"; 
           croucher.style.display = "block";   
           rpg.classList.add("crouch");
-          document.addEventListener("keyup", function() {
+          document.addEventListener("keyup", keyup);
+          function keyup() {
             runner.style.display = "block";
             jumper.style.display = "none"; 
             croucher.style.display = "none";   
             rpg.classList.remove("crouch");
-          })
+            document.removeEventListener("keyup", keyup);
+          }
         }
       }
-
-
-
+      
+      
       const frames = document.querySelector(".runner").querySelectorAll("img");
 
       function run(interval) {
