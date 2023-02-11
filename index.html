@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
   * {
     margin: 0;
     padding: 0;
@@ -39,21 +39,54 @@
     width: 100%;
     height: 128px;
     bottom: 0;
-    background-color: aqua;
+  }
+
+  .game .zone .player-rpg {
+      display: flex;
+      align-items: flex-end;
+      position: absolute;
+      background-color: aliceblue;
+      bottom: 0;
+    }
+
+  .game .zone .player-rpg img {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    z-index: 999;
+  }
+
+   .game .zone .player-rpg.jump {
+    animation: jump 0.75s ease-out, 0.75s landing .75s ease-in;
+  }
+
+   .game .zone .player-rpg .runner img {
+        display: none;
+    }
     
+    .game .zone .player-rpg .runner img:first-child {
+        display: block;
+    }
+
+  .game .zone .player-rpg.crouch {
+    width: 64px !important;
+    height: 40px !important;
+  }
+
+  .game .zone .player-rpg .croucher {
+    width: 56px;
+    height: 56px;
   }
 
   .game .zone .division {
     position: relative;
     display: flex;
-    background-color: lightblue;
     flex-direction: row;
     width: 100%;  
     height: 128px;
   }
 
-  .game .zone .container,
-  .game .zone .player {
+  .game .zone .container {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -62,14 +95,6 @@
     width: 64px;
     display: flex;
     align-items: flex-end;
-  }
-
-  .game .zone .player {
-    position: absolute;
-    bottom: 0;
-    width: 64px;
-    height: 64px;
-
   }
 
   .game .zone .division .container {
@@ -82,17 +107,19 @@
   }
 
   .game .zone .division .container > div {
-    width: 64px;
-    height: 64px;
-  }
-
-  .game .zone .player .image {
+    display: flex;
     position: relative;
     width: 64px;
     height: 64px;
-    z-index: 999;
-  }
+    border: 1px solid black;
+  } 
 
+  .game .zone .division .container div.box1 {
+    position: relative;
+    top: 24px;
+    border: 1px solid black;
+
+  }
 
   .game .floor {
     position: relative;
@@ -117,6 +144,13 @@
     object-position: center;
   }
 
+  .image {
+    position: relative;
+    bottom: 0;
+    width: 64px;
+    height: 64px;
+  }
+
   @keyframes jump {
     0% {
       bottom: 0;
@@ -129,6 +163,7 @@
   @keyframes landing {
     0% {
       bottom: 112px;
+
     }
 
     100% {
@@ -155,94 +190,204 @@
     }
   }
 </style>
-    <body>
-        <div class="game">
-            <div class="zone">
-                <div class="player">
-                    <img src="./assets/player-rpg.png" alt="The dinosaur."
-                        class="image">
-                </div>
-
-                <section class="division">
-                    <div class="container A">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container A">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container A">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container A">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container B">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container A">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container A">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container A">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container C">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container A">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container A">
-                        <div class="box1"></div>
-                        <div class="box2"></div>
-                    </div>
-                    <div class="container B">
-                        <div class="box1">
-                        </div>
-                        <div class="box2">
-                            <img src="./assets/cactus.png" alt="The cactus image." class="cactus">
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="floor"></div>
+  <body>
+    <div class="game">
+      <div class="zone">
+        <div class="player-rpg" id="player-rpg">
+          <img src="./assets/images/runner/runner_sat.png" alt="Crouch runner."
+            class="croucher" style="display: none; ;">
+          <div class="jumper">
+            <img src="./assets/images/runner/runner_jump1.png" alt="Jumping
+              runner." class="jump1" style="display: none;">
+            <img src="./assets/images/runner/runner_jump2.png" alt="Bouncing
+              runner." class="jump2" style="display: none;">
+            <img src="./assets/images/runner/runner_jump3.png" alt="Landing
+              runner." class="jump3" style="display: none;">
+          </div>
+          <div class="runner" id="runner">
+            <img src="./assets/images/runner/runner_cours1.png" alt="A part of
+              the
+              runner gif." class="runner1">
+            <img src="./assets/images/runner/runner_cours2.png" alt="A part of
+              the
+              runner gif." class="runner2">
+            <img src="./assets/images/runner/runner_cours3.png" alt="A part of
+              the
+              runner gif." class="runner3">
+            <img src="./assets/images/runner/runner_cours4.png" alt="A part of
+              the
+              runner gif." class="runner4">
+            <img src="./assets/images/runner/runner_cours5.png" alt="A part of
+              the
+              runner gif." class="runner5">
+            <img src="./assets/images/runner/runner_cours6.png" alt="A part of
+              the
+              runner gif." class="runner6">
+          </div>
         </div>
-        <script>  
-      const rpg = document.querySelector(".image");
 
-      function jump() {
-        if (!rpg.classList.contains("jump")) {
-          rpg.classList.add("jump");
-          setTimeout(function () {
-            rpg.classList.remove("jump");
-          }, 2250)
+        <section class="division">
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container B">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container C">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container B">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+        </section>
+      </div>
+      <div class="floor"></div>
+    </div>
+    <script> 
+       const rpg = document.getElementById("player-rpg");
+      const runner = document.getElementById("runner");
+      const jumper = document.querySelector(".jumper");
+      const jump1 = document.querySelector(".jump1");
+      const jump2 = document.querySelector(".jump2");
+      const jump3 = document.querySelector(".jump3");
+      const croucher = document.querySelector(".croucher")
+
+
+      document.addEventListener("keydown", function(e) {
+          if (e.keyCode === 32 || e.keyCode === 38 || e.keyCode === 90) {
+              jump(1500);
+          } else if (e.keyCode === 40 || e.keyCode === 83) {
+              crouch();
+          }
+      })
+
+      function jump(time) {
+          let timelapse = parseInt(time);
+          if (!rpg.classList.contains("jump")) {
+              console.log("ok")
+              runner.style.display = "none";
+              jump1.style.display = "block";
+              jump2.style.display = "none";
+              jump3.style.display = "none";
+              rpg.classList.add("jump");
+              setTimeout(function() {
+                  runner.style.display = "none";
+                  jump1.style.display = "none";
+                  jump2.style.display = "block";
+                  jump3.style.dispplay = "none";
+              }, (timelapse / 2))
+              setTimeout(function() {
+                  runner.style.display = "none";
+                  jump1.style.display = "none";
+                  jump2.style.display = "none";
+                  jump3.style.display = "block";
+              }, timelapse)
+              setTimeout(function() {
+                  runner.style.display = "block";
+                  jump1.style.display = "none";
+                  jump2.style.display = "none";
+                  jump3.style.display = "none"
+                  rpg.classList.remove("jump");
+              }, (timelapse + 200))
+          }
+      }
+
+      function crouch() {
+        if (!rpg.classList.contains("crouch")) {
+          console.log("ok");
+          runner.style.display = "none";
+          jumper.style.display = "none"; 
+          croucher.style.display = "block";   
+          rpg.classList.add("crouch");
+          document.addEventListener("keyup", function() {
+            runner.style.display = "block";
+            jumper.style.display = "none"; 
+            croucher.style.display = "none";   
+            rpg.classList.remove("crouch");
+          })
         }
       }
 
-      document.addEventListener("keydown", function(event) {
-        jump();
+
+
+      const frames = document.querySelector(".runner").querySelectorAll("img");
+
+      function run(interval) {
+          const frameCount = frames.length;
+          let i = 0;
+
+          setInterval(function runner() {
+              frames[i % frameCount].style.display = "none";
+              frames[++i % frameCount].style.display = "block";
+          }, interval);
+      }
+
+      const run1 = run(150);
+
+      const downObstacle = document.querySelectorAll(".B")
+      const upObstacle = document.querySelectorAll(".C");
+
+      downObstacle.forEach((obstacle) => {
+          let image = document.createElement("img");
+          image.src = "./assets/images/cactus.png";
+          image.classList = "image down-obstacle";
+          let box = obstacle.querySelector(".box2");
+          box.appendChild(image);
       })
 
-      const downObstacle = document.querySelectorAll(".container.B")
-
-      downObstacle.forEach((obstacle) {
-        image = document.createElement("img")
-        image.src = ""
-        box = obstacle.querySelector(".box2");
+      upObstacle.forEach((obstacle) => {
+          let image = document.createElement("img");
+          image.src = "./assets/images/birds.png";
+          image.classList = "image up-obstacle";
+          let box = obstacle.querySelector(".box1");
+          box.appendChild(image);
       })
+
      </script>
     <script href="./scripts/editSaveJSON.js"></script>
-    </body>
+  </body>
 </html>
