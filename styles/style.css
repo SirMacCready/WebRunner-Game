@@ -79,7 +79,8 @@
    flex-direction: row;
    width: 100%;
    height: 128px;
-   overflow: hidden;
+   /* overflow: hidden; */
+   animation: translation 5s linear;
  }
 
  .game .zone .container {
@@ -98,22 +99,22 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   /* border: 1px solid rgb(0, 0, 0); */
-   animation: translation 5s linear infinite;
+   border: 1px solid rgb(0, 0, 0);
  }
 
  .game .zone .division .container>div {
    display: flex;
    position: relative;
+   justify-content: center;
    width: 64px;
    height: 64px;
-   /* border: 1px solid black; */
+   border: 1px solid black;
  }
 
  .game .zone .division .container div.box1 {
    position: relative;
    top: 24px;
-   /* border: 1px solid black; */
+   border: 1px solid black;
 
  }
 
@@ -129,6 +130,10 @@
    position: relative;
    bottom: 0;
    height: 64px;
+ }
+
+ .obstacle {
+  position: absolute;
  }
 
  @keyframes jump {
