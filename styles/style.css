@@ -1,0 +1,153 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body,
+ html {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+   /* overflow: hidden; */
+ }
+
+ .game {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   position: relative;
+   width: 896px;
+   height: 410px;
+ }
+
+ .game .zone {
+   display: flex;
+   position: relative;
+   width: 100%;
+   height: 128px;
+   bottom: 0;
+ }
+
+ .game .zone .player-rpg {
+   display: flex;
+   align-items: flex-end;
+   position: absolute;
+   /* background-color: aliceblue; */
+   bottom: 0;
+ }
+
+ .game .zone .player-rpg img {
+   position: relative;
+   height: 64px;
+   /* z-index: 999; */
+ }
+
+ .game .zone .player-rpg.jump {
+   animation: jump 0.75s ease-out, 0.75s landing .75s ease-in;
+ }
+
+ .game .zone .player-rpg .runner img {
+   display: none;
+ }
+
+ .game .zone .player-rpg .runner img:first-child {
+   display: block;
+ }
+
+ .game .zone .player-rpg.jump {
+   animation: jump 0.75s ease-out, 0.75s landing .75s ease-in;
+ }
+
+ .game .zone .player-rpg.crouch {
+   width: 64px !important;
+   height: 35px !important;
+ }
+
+ .game .zone .player-rpg .croucher {
+   width: 56px;
+   height: 56px;
+ }
+
+ .game .zone .division {
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   height: 128px;
+   overflow: hidden;
+ }
+
+ .game .zone .container {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   bottom: 0;
+   height: 128px;
+   width: 64px;
+   display: flex;
+   align-items: flex-end;
+ }
+
+ .game .zone .division .container {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   /* border: 1px solid rgb(0, 0, 0); */
+   animation: translation 5s linear infinite;
+ }
+
+ .game .zone .division .container>div {
+   display: flex;
+   position: relative;
+   width: 64px;
+   height: 64px;
+   /* border: 1px solid black; */
+ }
+
+ .game .zone .division .container div.box1 {
+   position: relative;
+   top: 24px;
+   /* border: 1px solid black; */
+
+ }
+
+ .game .floor {
+   position: relative;
+   bottom: 0;
+   background-color: brown;
+   height: 200px;
+   width: 100%;
+ }
+
+ .image {
+   position: relative;
+   bottom: 0;
+   height: 64px;
+ }
+
+ @keyframes jump {
+   0% {
+     bottom: 0;
+   }
+
+   100% {
+     bottom: 112px;
+   }
+ }
+
+ @keyframes landing {
+   0% {
+     bottom: 112px;
+
+   }
+
+   100% {
+     bottom: 0px;
+   }
+ }
