@@ -70,7 +70,7 @@
 
   .game .zone .player-rpg.crouch {
     width: 64px !important;
-    height: 40px !important;
+    height: 35px !important;
   }
 
   .game .zone .player-rpg .croucher {
@@ -197,9 +197,12 @@
           <img src="./assets/images/runner/runner_sat.png" alt="Crouch runner."
             class="croucher" style="display: none;">
           <div class="jumper">
-            <img src="./assets/images/runner/runner_jump1.png" alt="Jumping runner." class="jump1" style="display: none;">
-            <img src="./assets/images/runner/runner_jump2.png" alt="Bouncing runner." class="jump2" style="display: none;">
-            <img src="./assets/images/runner/runner_jump3.png" alt="Landing runner." class="jump3" style="display: none;">
+            <img src="./assets/images/runner/runner_jump1.png" alt="Jumping
+              runner." class="jump1" style="display: none;">
+            <img src="./assets/images/runner/runner_jump2.png" alt="Bouncing
+              runner." class="jump2" style="display: none;">
+            <img src="./assets/images/runner/runner_jump3.png" alt="Landing
+              runner." class="jump3" style="display: none;">
           </div>
           <div class="runner" id="runner">
             <img src="./assets/images/runner/runner_cours1.png" alt="A part of
@@ -285,6 +288,58 @@
       <div class="floor"></div>
     </div>
     <script> 
+
+        const downObstacle = document.querySelectorAll(".B")
+      const upObstacle = document.querySelectorAll(".C");
+
+      downObstacle.forEach((obstacle) => {
+          let image = document.createElement("img");
+          image.src = "./assets/images/cactus.png";
+          image.classList = "image obstacle down-obstacle";
+          let boxes = obstacle.querySelectorAll(".box2");
+          boxes.forEach((box) => {box.appendChild(image)})
+      })
+
+      upObstacle.forEach((obstacle) => {
+          let image = document.createElement("img");
+          image.src = "./assets/images/birds.png";
+          image.classList = "image obstacle up-obstacle";
+          let boxes = obstacle.querySelectorAll(".box1");
+          boxes.forEach((box) => {box.appendChild(image)})
+      })
+
+
+      let isAlive = setInterval(function () {
+        let player = document.querySelector(".player-rpg");
+        
+        let playerRight = parseInt(player.getBoundingClientRect().right);
+        let playerTop = parseInt(player.getBoundingClientRect().top);
+        let playerBottom = parseInt(player.getBoundingClientRect().bottom);
+        
+        let obstaclesDown = document.querySelectorAll(".down-obstacle");
+
+        obstaclesDown.forEach((obstacleDown) => {
+          let obstacleDownLeft = parseInt(obstacleDown.getBoundingClientRect().left);
+          let obstacleDownTop = parseInt(obstacleDown.getBoundingClientRect().top);
+          
+          if (playerRight >= obstacleDownLeft && playerRight - 64 <= obstacleDownLeft && playerBottom >= obstacleDownTop) {
+            alert("collision");
+          }
+        })
+        
+        let obstaclesUp = document.querySelectorAll(".up-obstacle");
+
+        obstaclesUp.forEach((obstacleUp) => {
+          let obstacleUpLeft = parseInt(obstacleUp.getBoundingClientRect().left);
+          let obstacleUpBottom = parseInt(obstacleUp.getBoundingClientRect().bottom);
+
+          if (playerRight >= obstacleUpLeft && playerRight - 64 <= obstacleUpLeft && playerTop <= obstacleUpBottom) {
+            alert("collision");
+          }
+        })
+      }, 100);
+
+
        const rpg = document.getElementById("player-rpg");
       const runner = document.getElementById("runner");
       const jumper = document.querySelector(".jumper");
@@ -317,7 +372,6 @@
           jump2.style.display = "none";
           jump3.style.display = "none";
           rpg.classList.add("jump");
-          console.log(jump1.style.display);
           setTimeout(function() {
             runner.style.display = "none";
             jump1.style.display = "none";
@@ -374,26 +428,6 @@
       }
 
       const run1 = run(150);
-
-      const downObstacle = document.querySelectorAll(".B")
-      const upObstacle = document.querySelectorAll(".C");
-
-      downObstacle.forEach((obstacle) => {
-          let image = document.createElement("img");
-          image.src = "./assets/images/cactus.png";
-          image.classList = "image down-obstacle";
-          let box = obstacle.querySelector(".box2");
-          box.appendChild(image);
-      })
-
-      upObstacle.forEach((obstacle) => {
-          let image = document.createElement("img");
-          image.src = "./assets/images/birds.png";
-          image.classList = "image up-obstacle";
-          let box = obstacle.querySelector(".box1");
-          box.appendChild(image);
-      })
-
      </script>
     <script href="./scripts/editSaveJSON.js"></script>
   </body>
