@@ -3,7 +3,7 @@ function run(interval) {
   
   for (let i = 1; i <= 6; i++) {
     let image = document.createElement("img");
-    image.src = `../assets/images/runner/runner_cours${i}.png`
+    image.src = `./../assets/images/runner/runner_cours${i}.png`
     runner.appendChild(image);
   }
   
