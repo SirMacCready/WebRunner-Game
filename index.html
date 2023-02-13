@@ -45,90 +45,86 @@
           <div class="runner" id="runner">
           </div>
         </div>
-        <section class="immutable-division">
-          <div class="division">
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container B">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container C">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container B">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
-            <div class="container A">
-              <div class="box1"></div>
-              <div class="box2"></div>
-            </div>
+        <section class="division">
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container B">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container C">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container B">
+            <div class="box1"></div>
+            <div class="box2"></div>
+          </div>
+          <div class="container A">
+            <div class="box1"></div>
+            <div class="box2"></div>
           </div>
         </section>
       </div>
-        <div class="floor"></div>
-      </div>
-      <script>
-      // let isAlive2 = setInterval(function () {
-      //   let containers = document.querySelectorAll(".container");
-      //   let zone = document.querySelector(".zone");
-      //   let division = document.querySelector(".division")
-      //   containers.forEach((container) => {
-      //     console.log(container);
-      //     let containerRight = parseInt(container.getBoundingClientRect().right);
-      //     let zoneLeft = parseInt(zone.getBoundingClientRect().left)
-      //     if (containerRight <= zoneLeft) {
-      //       container.remove();
-      //     }
-      //   })
-      // }, 100);
-
-      // isAlive2();
+      <div class="floor"></div>
+    </div>
+    <script>
+      let isPassed = setInterval(function () {
+        let containers = document.querySelectorAll(".container");
+        let zone = document.querySelector(".zone");
+        let division = document.querySelector(".division")
+        console.log(zone)
+        containers.forEach((container) => {
+          let containerRight = parseInt(container.getBoundingClientRect().right);
+          let zoneLeft = parseInt(zone.getBoundingClientRect().left);
+          if (containerRight <= zoneLeft) {
+            container.remove();
+          }
+        })
+      }, 100);
     </script>
-      <script src="./scripts/addObstacles.js"></script>
-      <script src="./scripts/collisions.js"></script>
-      <script src="./scripts/jump-crouch.js"></script>
-      <script src="./scripts/animation-runner.js"></script>
-      <!-- <script src="./scripts/editSaveJSON.js"></script> -->
-    </body>
-  </html>
+    <script src="./scripts/addObstacles.js"></script>
+    <script src="./scripts/collisions.js"></script>
+    <script src="./scripts/jump-crouch.js"></script>
+    <script src="./scripts/animation-runner.js"></script>
+    <!-- <script src="./scripts/editSaveJSON.js"></script> -->
+  </body>
+</html>
