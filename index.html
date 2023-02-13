@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Runner WEB</title>
-    <link rel="stylesheet" href="./styles/style.css">
-  </head>
-  <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Runner WEB</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/Editor.css">
+    </head>
+    <style>
 
   /* @keyframes horizontal-scroll {
     0% {
@@ -28,103 +29,71 @@
     }
   }
 </style>
-  <body>
-    <div class="game">
-      <div class="zone">
-        <div class="player-rpg" id="player-rpg">
-          <img src="./assets/images/runner/runner_sat.png" alt="Crouch runner."
-            class="croucher" style="display: none;">
-          <div class="jumper">
-            <img src="./assets/images/runner/runner_jump1.png" alt="Jumping
-              runner." class="jump1" style="display: none;">
-            <img src="./assets/images/runner/runner_jump2.png" alt="Bouncing
-              runner." class="jump2" style="display: none;">
-            <img src="./assets/images/runner/runner_jump3.png" alt="Landing
-              runner." class="jump3" style="display: none;">
-          </div>
-          <div class="runner" id="runner">
-          </div>
+    <body>
+        <div id="options">
+            <div class="Add" id="menuOption"><p>Ajouter Un Block</p></div>
+            <div class="delete" id="menuOption"><p>Supprimer Un Block</p></div>
+            <div class="edit" id="menuOption"><p>Modifier Un Block</p></div>
         </div>
-        <section class="division">
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container B">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container C">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container B">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-          <div class="container A">
-            <div class="box1"></div>
-            <div class="box2"></div>
-          </div>
-        </section>
-      </div>
-      <div class="floor"></div>
-    </div>
-    <script>
-      let isPassed = setInterval(function () {
-        let containers = document.querySelectorAll(".container");
-        let zone = document.querySelector(".zone");
-        let division = document.querySelector(".division")
-        console.log(zone)
-        containers.forEach((container) => {
-          let containerRight = parseInt(container.getBoundingClientRect().right);
-          let zoneLeft = parseInt(zone.getBoundingClientRect().left);
-          if (containerRight <= zoneLeft) {
-            container.remove();
-          }
-        })
-      }, 100);
-    </script>
-    <script src="./scripts/addObstacles.js"></script>
-    <script src="./scripts/collisions.js"></script>
-    <script src="./scripts/jump-crouch.js"></script>
-    <script src="./scripts/animation-runner.js"></script>
-    <!-- <script src="./scripts/editSaveJSON.js"></script> -->
-  </body>
+        <div id="addMenu">
+            <div id="addA"><p>Ajouter Un Block A</p></div>
+            <div id="addB"><p>Ajouter Un Block B</p></div>
+            <div id="addC"><p>Ajouter Un Block C</p></div>
+        </div>
+        <div id="editMenu"> </div>
+        <div id="delMenu">
+            <div id="delA"><p>Supprimer Un Block </p></div>
+        </div>
+        <div class="game">
+            <div class="zone">
+                <div class="player-rpg" id="player-rpg">
+                    <img src="./assets/images/runner/runner_sat.png" alt="Crouch
+                        runner."
+                        class="croucher" style="display: none;">
+                    <div class="jumper">
+                        <img src="./assets/images/runner/runner_jump1.png"
+                            alt="Jumping
+                            runner." class="jump1" style="display: none;">
+                        <img src="./assets/images/runner/runner_jump2.png"
+                            alt="Bouncing
+                            runner." class="jump2" style="display: none;">
+                        <img src="./assets/images/runner/runner_jump3.png"
+                            alt="Landing
+                            runner." class="jump3" style="display: none;">
+                    </div>
+                    <div class="runner" id="runner">
+                    </div>
+                </div>
+                <section class="division">
+                </section>
+            </div>
+            <div class="floor"></div>
+        </div>
+        <script>
+            let isPassed = setInterval(function () {
+                let containers = document.querySelectorAll(".container");
+                let zone = document.querySelector(".zone");
+                let division = document.querySelector(".division")
+                console.log(zone)
+                containers.forEach((container) => {
+                let containerRight = parseInt(container.getBoundingClientRect().right);
+                let zoneLeft = parseInt(zone.getBoundingClientRect().left);
+                if (containerRight <= zoneLeft) {
+                    container.style.visibility = "hidden";
+                    // container.remove();
+                }
+                })
+            }, 100);
+
+            // let isComing = setInterval(function () {
+            //     let 
+            // })
+        </script>
+        <script src="./scripts/addObstacles.js"></script>
+        <script src="./scripts/Editor.js"></script>
+        <script src="./scripts/collisions.js"></script>
+        <script src="./scripts/jump-crouch.js"></script>
+        <script src="./scripts/animation-runner.js"></script>
+        <!-- <script src="./scripts/editSaveJSON.js"></script> -->
+    </body>
 </html>

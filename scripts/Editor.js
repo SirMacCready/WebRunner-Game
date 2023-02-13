@@ -1,11 +1,18 @@
-let visibility = "hidden"
 const addMenu = document.querySelector('#addMenu')
-addMenu.style.visibility = 'hidden'
+addMenu.style.visibility = 'hidden';
+
 function readJSONBlocks(type, data, i) {
     if (data.blocks[i].type == type) {
         let newDiv = document.createElement('div');
-        newDiv.id = 'container' + type;
-        document.getElementById('blocks').appendChild(newDiv);
+        newDiv.className = 'container ' + type;
+        document.querySelector('.division').appendChild(newDiv);
+        let newBox = document.createElement('div');
+        newBox.className = "box1";
+        newDiv.appendChild(newBox);
+        newBox = document.createElement('div');
+        newBox.className = "box2";
+        newDiv.appendChild(newBox);
+        AddObstacle()
     }
 }
 
@@ -13,18 +20,27 @@ function AddBlock(type, data) {
     document.querySelector('#add' + type).addEventListener('click', () => {
         newObject = { "type": type }
         let newDiv = document.createElement('div');
-        newDiv.id = 'container' + type;
+        newDiv.classList = 'container ' + type;
         data["blocks"].push(newObject)
-        document.getElementById('blocks').appendChild(newDiv)
+        document.querySelector('.division').appendChild(newDiv);
+        let newBox = document.createElement('div');
+        newBox.className = "box1";
+        newDiv.appendChild(newBox);
+        newBox = document.createElement('div');
+        newBox.className = "box2";
+        newDiv.appendChild(newBox);
+        AddObstacle()
     })
 }
+
 function saveDataJSON(elements, data, i) {
-    let String = elements.childNodes[i].id
+    let String = elements.childNodes[i].className
     let JSONObject = { type: String.substr(String.length - 1) }
     data.blocks.push(JSONObject)
 }
-function loadEditJSON() {
-    fetch("./scripts/levels/level1.json")
+
+function loadEditJSON(levelURI) {
+    fetch(levelURI)
         .then((param) => param.json())
         .then((data) => {
             let i = 0
@@ -47,17 +63,23 @@ function loadEditJSON() {
             AddBlock('A', data)
             AddBlock('B', data)
             AddBlock('C', data)
-            document.querySelectorAll("#blocks").forEach(el => el.addEventListener('click', (a) => {
-                a.srcElement.remove()
-            })) *
-                document.querySelectorAll("#blocks").forEach(el => {
-                    data.blocks = []
-                    i = 0
-                    while (i < el.childNodes.length) {
-                        saveDataJSON(el, data, i)
-                        i++
-                    }
+
+            let containers = document.querySelector(".division").querySelectorAll(".container")
+            containers.forEach((container) => {
+                container.addEventListener('click', function () {
+                    container.remove()
                 })
+            });
+            containers.forEach(container => {
+                data.blocks = []
+                i = 0
+                while (i < container.childNodes.length) {
+                    saveDataJSON(container, data, i)
+                    i++
+                }
+            })
             let jsonData = JSON.stringify(data);
         })
 }
+
+loadEditJSON("./scripts/levels/level1.json")
