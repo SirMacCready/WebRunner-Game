@@ -30,6 +30,7 @@ function AddBlock(type, data) {
         newBox.className = "box2";
         newDiv.appendChild(newBox);
         AddObstacle()
+        deleteContainer()
     })
 }
 
@@ -37,6 +38,16 @@ function saveDataJSON(elements, data, i) {
     let String = elements.childNodes[i].className
     let JSONObject = { type: String.substr(String.length - 1) }
     data.blocks.push(JSONObject)
+}
+
+function deleteContainer() {
+    let containers = document.querySelector(".division").querySelectorAll(".container");
+    containers.forEach((container) => {
+        container.addEventListener('click', function () {
+            container.remove()
+        })
+    });
+    return
 }
 
 function loadEditJSON(levelURI) {
@@ -64,13 +75,11 @@ function loadEditJSON(levelURI) {
             AddBlock('B', data)
             AddBlock('C', data)
 
-            let containers = document.querySelector(".division").querySelectorAll(".container")
+            let containers = document.querySelector(".division").querySelectorAll(".container");
+
+            deleteContainer()
+
             containers.forEach((container) => {
-                container.addEventListener('click', function () {
-                    container.remove()
-                })
-            });
-            containers.forEach(container => {
                 data.blocks = []
                 i = 0
                 while (i < container.childNodes.length) {
