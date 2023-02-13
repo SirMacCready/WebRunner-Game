@@ -17,14 +17,14 @@ upObstacle.forEach((obstacle) => {
   boxes.forEach((box) => {
     for (let i = 1; i <= 7; i++) {
       let image = document.createElement("img");
-      image.src = `./../assets/images/obstacle-up/bird${i}.png`;
+      image.src = `./assets/images/obstacle-up/bird${i}.png`;
       image.style.display = "none";
       image.classList = "image obstacle up-obstacle";
       box.appendChild(image);
     }
     for (let i = 7; i >= 1; i--) {
       let image = document.createElement("img");
-      image.src = `./../assets/images/obstacle-up/bird${i}.png`;
+      image.src = `./assets/images/obstacle-up/bird${i}.png`;
       image.style.display = "none";
       image.classList = "image obstacle up-obstacle";
       box.appendChild(image);
