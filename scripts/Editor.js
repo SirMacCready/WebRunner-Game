@@ -2,7 +2,6 @@ const addMenu = document.querySelector('#addMenu')
 addMenu.style.visibility = 'hidden';
 
 function readJSONBlocks(type, data, i) {
-    if (data.blocks[i].type == type) {
         let newDiv = document.createElement('div');
         newDiv.className = 'container ' + type;
         document.querySelector('.division').appendChild(newDiv);
@@ -13,7 +12,7 @@ function readJSONBlocks(type, data, i) {
         newBox.className = "box2";
         newDiv.appendChild(newBox);
         AddObstacle()
-    }
+    
 }
 
 function AddBlock(type, data) {
@@ -57,9 +56,7 @@ function loadEditJSON(levelURI) {
             let i = 0
             let data2 = data
             while (i != (data.blocks).length - 1) {
-                readJSONBlocks('A', data, i)
-                readJSONBlocks('B', data, i)
-                readJSONBlocks('C', data, i)
+                readJSONBlocks(data.blocks[i].type, data, i)
                 i++
             }
             document.querySelector('.Add').addEventListener('click', () => {
