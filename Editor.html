@@ -4,31 +4,45 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-    </style>
+        <title>Éditeur du RPG</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/Editor.css">
+
+        <link rel="stylesheet" href="https://use.typekit.net/yga1zcx.css" > 
     </head>
+
     <body>
-        <div id="options">
-            <div class="Add" id="menuOption"><p>Ajouter Un Block</p></div>
-            <div class="delete" id="menuOption"><p>Supprimer Un Block</p></div>
-            <div class="edit" id="menuOption"><p>Modifier Un Block</p></div>
+        <div class="menu">
+            <div class="options" id="options">
+                <div class="menuOption Add" id="menuOption"><p>Ajouter Un Block <img src="./assets/images/icon_right-arrow.png" alt="Right arrow black" class="right-arrow"></p></div>
+                <hr>
+                <div class="menuOption delete" id="menuOption"><p>Supprimer Un Block</p></div>
+                <hr>
+                <div class="menuOption edit" id="menuOption"><p>Modifier Un Block</p></div>
+            </div>
+            <div class="addMenu" id="addMenu">
+                <div class="add" id="addA"><p>Ajouter Un Block A</p></div>
+                <div class="add" id="addB"><p>Ajouter Un Block B</p></div>
+                <div class="add" id="addC"><p>Ajouter Un Block C</p></div>
+            </div>
+            <div id="editMenu"></div>
         </div>
-        <div id="addMenu">
-            <div id="addA"><p>Ajouter Un Block A</p></div>
-            <div id="addB"><p>Ajouter Un Block B</p></div>
-            <div id="addC"><p>Ajouter Un Block C</p></div>
+        <div class="game">
+            <div class="zone">
+                <div class="player-rpg" id="player-rpg">
+                    <div class="runner" id="runner">
+                        <img src="./assets/images/runner/runner debout.png"
+                            alt="">
+                    </div>
+                </div>
+                <section class="division">
+                </section>
+            </div>
+            <div class="floor"></div>
         </div>
-        <div id="editMenu"> </div>
-        <div id="delMenu">
-            <div id="delA"><p>Supprimer Un Block </p></div>
-        </div>
-
-        <div id="blocks"></div>
-
-        <script src="scripts/Editor.js"></script>
-        <script>        
-                loadEditJSON() 
-        </script>
+        <script src="./scripts/click.js"></script>
+        <script src="./scripts/Editor.js"></script>
+        <script src="./scripts/addObstacles.js"></script>
+        <!-- <script src="./scripts/editSaveJSON.js"></script> -->
     </body>
 </html>
