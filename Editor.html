@@ -27,15 +27,7 @@
         <div id="blocks"></div>
 
         <script src="scripts/Editor.js"></script>
-        <script>
-        function Save(content, fileName) {
-                let a = document.createElement("a");
-                let file = new Blob([content]);
-                a.href = URL.createObjectURL(file);
-                a.download = fileName;
-                a.click();
-                }
-                        
+        <script>        
                 loadEditJSON() 
         </script>
     </body>

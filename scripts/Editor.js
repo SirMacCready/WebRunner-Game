@@ -1,6 +1,3 @@
-const addMenu = document.querySelector('#addMenu')
-addMenu.style.visibility = 'hidden';
-
 function readJSONBlocks(type, data, i) {
         let newDiv = document.createElement('div');
         newDiv.className = 'container ' + type;
@@ -11,9 +8,8 @@ function readJSONBlocks(type, data, i) {
         newBox = document.createElement('div');
         newBox.className = "box2";
         newDiv.appendChild(newBox);
-        AddObstacle()
-    
-}
+        addObstacle(type, newDiv);
+    }
 
 function AddBlock(type, data) {
     document.querySelector('#add' + type).addEventListener('click', () => {
@@ -28,8 +24,10 @@ function AddBlock(type, data) {
         newBox = document.createElement('div');
         newBox.className = "box2";
         newDiv.appendChild(newBox);
-        AddObstacle()
-        deleteContainer()
+        if (type == "B" || type == "C") {
+            addObstacle(type, newDiv);
+        }
+        // deleteContainer()
     })
 }
 
@@ -41,12 +39,15 @@ function saveDataJSON(elements, data, i) {
 
 function deleteContainer() {
     let containers = document.querySelector(".division").querySelectorAll(".container");
-    containers.forEach((container) => {
-        container.addEventListener('click', function () {
-            container.remove()
-        })
-    });
-    return
+    let deleteButton = document.querySelector(".delete");
+
+    deleteButton.addEventListener("click", function () {
+        containers.forEach((container) => {
+            container.addEventListener('click', function () {
+                container.remove()
+            })
+        });
+    })
 }
 
 function loadEditJSON(levelURI) {
@@ -59,14 +60,14 @@ function loadEditJSON(levelURI) {
                 readJSONBlocks(data.blocks[i].type, data, i)
                 i++
             }
-            document.querySelector('.Add').addEventListener('click', () => {
+            const addMenu = document.querySelector('#addMenu')
+            addMenu.style.visibility = 'hidden';
+            document.querySelector('.Add').addEventListener('click', function () {
                 if (addMenu.style.visibility == 'visible') {
                     addMenu.style.visibility = 'hidden'
-                    return
+                } else if (addMenu.style.visibility == 'hidden') {
+                    addMenu.style.visibility = 'visible';
                 }
-                else (addMenu.style.visibility == 'hidden')
-                addMenu.style.visibility = 'visible'
-                return
             })
             AddBlock('A', data)
             AddBlock('B', data)
@@ -74,7 +75,7 @@ function loadEditJSON(levelURI) {
 
             let containers = document.querySelector(".division").querySelectorAll(".container");
 
-            deleteContainer()
+            deleteContainer();
 
             containers.forEach((container) => {
                 data.blocks = []
@@ -86,6 +87,14 @@ function loadEditJSON(levelURI) {
             })
             let jsonData = JSON.stringify(data);
         })
+}
+
+function Save(content, fileName) {
+    let a = document.createElement("a");
+    let file = new Blob([content]);
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
 }
 
 loadEditJSON("./scripts/levels/level1.json")

@@ -74,7 +74,6 @@
                 let containers = document.querySelectorAll(".container");
                 let zone = document.querySelector(".zone");
                 let division = document.querySelector(".division")
-                console.log(zone)
                 containers.forEach((container) => {
                 let containerRight = parseInt(container.getBoundingClientRect().right);
                 let zoneLeft = parseInt(zone.getBoundingClientRect().left);
@@ -89,8 +88,8 @@
             //     let 
             // })
         </script>
-        <script src="./scripts/addObstacles.js"></script>
         <script src="./scripts/Editor.js"></script>
+        <script src="./scripts/addObstacles.js"></script>
         <script src="./scripts/collisions.js"></script>
         <script src="./scripts/jump-crouch.js"></script>
         <script src="./scripts/animation-runner.js"></script>

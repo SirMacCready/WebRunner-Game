@@ -12,7 +12,7 @@ let isAlive = setInterval(function () {
     let obstacleDownTop = parseInt(obstacleDown.getBoundingClientRect().top);
 
     if (playerRight >= obstacleDownLeft && playerRight - 64 <= obstacleDownLeft && playerBottom >= obstacleDownTop) {
-      // alert("Game Over");
+      alert("Game Over");
       // gameOver();
     }
   })
@@ -24,7 +24,7 @@ let isAlive = setInterval(function () {
     let obstacleUpBottom = parseInt(obstacleUp.getBoundingClientRect().bottom);
 
     if (playerRight >= obstacleUpLeft && playerRight - 64 <= obstacleUpLeft && playerTop <= obstacleUpBottom) {
-      // alert("Game Over");
+      alert("Game Over");
       // gameOver();
     }
   })
