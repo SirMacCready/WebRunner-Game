@@ -8,24 +8,37 @@
         <link rel="stylesheet" href="./styles/style.css">
         <link rel="stylesheet" href="./styles/Editor.css">
 
-        <link rel="stylesheet" href="https://use.typekit.net/yga1zcx.css" > 
+        <link rel="stylesheet" href="https://use.typekit.net/yga1zcx.css">
+        <style>
+            .game {
+                overflow-x: scroll;
+            }
+        </style>
     </head>
 
     <body>
         <div class="menu">
             <div class="options" id="options">
-                <div class="menuOption Add" id="menuOption"><p>Ajouter Un Block <img src="./assets/images/icon_right-arrow.png" alt="Right arrow black" class="right-arrow"></p></div>
+                <div class="menuOption add" id="menuOption"><p>Ajouter Un Block
+                        <img src="./assets/images/icon_right-arrow.png"
+                            alt="Right arrow black" class="right-arrow"></p></div>
                 <hr>
-                <div class="menuOption delete" id="menuOption"><p>Supprimer Un Block</p></div>
+                <div class="menuOption edit" id="menuOption"><p>Modifier Un
+                        Block</p></div>
                 <hr>
-                <div class="menuOption edit" id="menuOption"><p>Modifier Un Block</p></div>
+                <div class="menuOption delete" id="menuOption"><p>Supprimer Un
+                        Block</p></div>
             </div>
             <div class="addMenu" id="addMenu">
-                <div class="add" id="addA"><p>Ajouter Un Block A</p></div>
-                <div class="add" id="addB"><p>Ajouter Un Block B</p></div>
-                <div class="add" id="addC"><p>Ajouter Un Block C</p></div>
+                <div class="add addA" id="addA"><p>Ajouter Un Block A</p></div>
+                <div class="add addB" id="addB"><p>Ajouter Un Block B</p></div>
+                <div class="add addC" id="addC"><p>Ajouter Un Block C</p></div>
             </div>
-            <div id="editMenu"></div>
+            <div class="editMenu" id="editMenu">
+                <div class="edit editToA" id="editToA"><p>Remplacer par A</p></div>
+                <div class="edit editToB" id="editToB"><p>Remplacer par B</p></div>
+                <div class="edit editToC" id="editToC"><p>Remplacer par C</p></div>
+            </div>
         </div>
         <div class="game">
             <div class="zone">
@@ -38,11 +51,33 @@
                 <section class="division">
                 </section>
             </div>
-            <div class="floor"></div>
+            <div class="floor">
+                <div class="floor1">
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="./scripts/click.js"></script>
         <script src="./scripts/Editor.js"></script>
         <script src="./scripts/addObstacles.js"></script>
-        <!-- <script src="./scripts/editSaveJSON.js"></script> -->
+        <script src="./scripts/revert-layer.js"></script>
+        <script> 
+
+        </script>
     </body>
 </html>

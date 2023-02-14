@@ -10,26 +10,29 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: center;
+   /* align-items: flex-end; */
    width: 100vw;
    height: 100vh;
-   /* overflow: hidden; */
+   overflow: hidden;
  }
 
  .game {
    display: flex;
    flex-direction: column;
-   justify-content: flex-end;
+   justify-content: flex-start;
    position: relative;
-   width: 896px;
-   height: 410px;
+   top: 232px;
+   /* margin-top: 240px; */
+   width: 100%;
+   height: 100vh;
+
  }
 
  .game .zone {
    display: flex;
    position: relative;
    width: 100%;
-   height: 128px;
+   height: 240px;
    bottom: 0;
  }
 
@@ -39,11 +42,12 @@
    position: absolute;
    /* background-color: aliceblue; */
    bottom: 0;
+   left: 240px;
  }
 
  .game .zone .player-rpg img {
    position: relative;
-   height: 64px;
+   height: 120px;
    /* z-index: 999; */
  }
 
@@ -60,13 +64,13 @@
  }
 
  .game .zone .player-rpg.crouch {
-   width: 64px !important;
-   height: 35px !important;
+   width: 120px !important;
+   height: 65px !important;
  }
 
  .game .zone .player-rpg .croucher {
-   width: 56px;
-   height: 56px;
+   width: 105px;
+   height: 105px;
  }
 
  .game .zone .division {
@@ -75,7 +79,7 @@
    flex-direction: row;
    /* justify-content: flex-end; */
    width: 100%;
-   height: 128px;
+   height: 240px;
    /* overflow: scroll; */
  }
 
@@ -84,8 +88,8 @@
    flex-direction: column;
    position: relative;
    bottom: 0;
-   height: 128px;
-   width: 64px;
+   height: 240px;
+   width: 120px;
    display: flex;
    align-items: center;
    /* animation: translation 5s linear; */
@@ -96,8 +100,8 @@
    display: flex;
    position: relative;
    justify-content: center;
-   width: 64px;
-   height: 64px;
+   width: 120px;
+   height: 120px;
    border: 1px solid black;
    z-index: -1
  }
@@ -109,18 +113,39 @@
 
  }
 
- .game .floor {
+ .game .zone .division .container div.box2 {
    position: relative;
-   bottom: 0;
-   background-color: brown;
-   height: 200px;
+   bottom: -8px;
+ }
+
+ .game .floor {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   width: 100vw;
+   height: auto;
+ }
+
+ .game .floor .floor2 {
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   z-index: revert-layer;
+   margin: -6px 0 -88px 0;
    width: 100%;
+   overflow: hidden;
+ }
+
+ .game .floor .floor2 img {
+   width: 50vw;
+   object-fit: contain;
+   object-position: center;
  }
 
  .image {
    position: relative;
    bottom: 0;
-   height: 64px;
+   height: 120px;
  }
 
  .obstacle {
@@ -133,13 +158,13 @@
    }
 
    100% {
-     bottom: 112px;
+     bottom: 120px;
    }
  }
 
  @keyframes landing {
    0% {
-     bottom: 112px;
+     bottom: 120px;
 
    }
 

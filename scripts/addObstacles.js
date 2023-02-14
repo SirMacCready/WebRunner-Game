@@ -32,6 +32,6 @@ function addObstacle(type, newDiv) {
     setInterval(function runner() {
       frames[i % frameCount].style.display = "none";
       frames[++i % frameCount].style.display = "block";
-    }, 100);
+    }, 65);
   }
 }

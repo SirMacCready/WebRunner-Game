@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+    .options {
+        border: 1px solid black;
+        margin: 1rem;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+    #menuOption {
+        display: inline-block;
+        border: 1px solid red;
+        padding: 1rem 1rem;
+        vertical-align: middle;
+      } 
+    .blocks {
+        border: 1px solid black;
+        margin: 1rem;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+    .container.A {
+        display: inline-block;
+        border: 1px solid red;
+        padding: 1rem 1rem;
+        vertical-align: middle;
+      } 
+    .container.B {
+        display: inline-block;
+        border: 1px solid rebeccapurple;
+        padding: 1rem 1rem;
+        vertical-align: middle;
+      } 
+    .container.C {
+        display: inline-block;
+        border: 1px solid chocolate;
+        padding: 1rem 1rem;
+        vertical-align: middle;
+      } 
+    #DDL {
+        text-align: right;
+    }
+    </style>
+    </head>
+    <body>
+        <div id="options">
+            <div class="add" id="menuOption"><p>Ajouter Un Block</p></div>
+            <div class="delete" id="menuOption"><p>Supprimer Un Block</p></div>
+            <div class="edit" id="menuOption"><p>Modifier Un Block</p></div>
+        </div>
+        <div id="addMenu">
+            <div id="addA"><p>Ajouter Un Block A</p></div>
+            <div id="addB"><p>Ajouter Un Block B</p></div>
+            <div id="addC"><p>Ajouter Un Block C</p></div>
+        </div>
+        <div id="delMenu">Supprimer Un Block</div>
+        <div id="editMenu">
+            <div id="editToA">Remplacer par A</div>
+            <div id="editToB">Remplacer par B</div>
+            <div id="editToC">Remplacer par C</div>
+
+        </div>
+        <div id="DDL"> download</div>
+        <div id="blocks"></div>
+
+        <script src="./scripts/Editor.js"></script>
+    </body>
+</html>

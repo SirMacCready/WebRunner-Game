@@ -1,69 +1,25 @@
-function showHide(visibility) {
-    if (visibility == 'visible') {
-        visibility = 'hidden'
-          return visibility
-             } 
-      else (visibility == 'hidden')
-         visibility = 'visible'
-         return visibility
-      }
-function Save(content, fileName) {
-    let a = document.createElement("a");
-    let file = new Blob([content]);
-    a.href = URL.createObjectURL(file);
-    a.download = fileName;
-    a.click();
-}
-function delBlock(a,data,delMenu){
-    let oldA= null
-    delMenu.onclick =  (bt) => {
-    let btn = bt.target
-    if (oldA != a) {
-        a.target.remove()
-        data.blocks.splice(a.target.id,1)
-        oldA = a
-    return
-        } }}
-function EditBlock(data,a,editMenu) {
-    editMenu.onclick =  (bt) => {
-        let btn = bt.target
-        if (btn.id != "del") { 
-        let newObject = {"type" : btn.id.substr(btn.id.length -1) }
-        a.target.className ="container" + btn.id.charAt((btn.id).length -1)
-        console.log("ezfzefezf",a.target.id)
-        data.blocks.splice(a.target.id,1,newObject)
-        }}}
-let visibility = "hidden"
-let FF = "addMenu"
-let FFFF = "#" + FF
-let FFF= document.querySelector(FF)
-const addMenu = document.querySelector('#addMenu')
-const editMenu= document.querySelector('#editMenu')
-addMenu.style.visibility = 'hidden'
-editMenu.style.visibility = 'hidden'
-const delMenu = document.querySelector('#delMenu')
+//#######################################################################
+// FRONT CODE
+//#######################################################################
 
-function readJSONBlocks(type, data, i) {
-        let newDiv = document.createElement('div');
-        newDiv.className = 'container ' + type;
-        document.querySelector('.division').appendChild(newDiv);
-        let newBox = document.createElement('div');
-        newBox.className = "box1";
-        newDiv.id    = i
-        newDiv.appendChild(newBox);
-        newBox = document.createElement('div');
-        newBox.className = "box2";
-        newDiv.appendChild(newBox);
-        addObstacle(type, newDiv);
-    }
+// Déclaration de variables
 
-function AddBlock(type, data) {
+const addMenu = document.querySelector('#addMenu');
+const editMenu = document.querySelector('#editMenu');
+const delMenu = document.querySelector('.delete');
+
+addMenu.style.display = 'none';
+editMenu.style.display = 'none';
+
+// Fonction ajout de blocks
+
+function addBlock(type, data) {
     document.querySelector('#add' + type).addEventListener('click', () => {
         let blockNum = (data.blocks).length
         newObject = { "type": type }
         let newDiv = document.createElement('div');
         newDiv.classList = 'container ' + type;
-        newDiv.id        = blockNum
+        newDiv.id = blockNum
         data["blocks"].push(newObject)
         document.querySelector('.division').appendChild(newDiv);
         let newBox = document.createElement('div');
@@ -79,24 +35,92 @@ function AddBlock(type, data) {
     })
 }
 
-function saveDataJSON(elements, data, i) {
-    let String = elements.childNodes[i].className
-    let JSONObject = { type: String.substr(String.length -1) }
-    data.blocks.push(JSONObject)
+// Fonction de délétion de block
+
+function delBlock(a, data, delMenu) {
+    let oldA = null
+    delMenu.onclick = (bt) => {
+        let btn = bt.target
+        if (oldA != a) {
+            a.target.remove()
+            data.blocks.splice(a.target.id, 1)
+            oldA = a
+            return
+        }
+    }
 }
 
+// Fonction d'édit de block
 
-function deleteContainer() {
-    let containers = document.querySelector(".division").querySelectorAll(".container");
-    let deleteButton = document.querySelector(".delete");
+function editBlock(data, a, editMenu) {
+    editMenu.onclick = (bt) => {
+        let btn = bt.target
+        if (btn.id != "del") {
+            let newObject = { "type": btn.id.substr(btn.id.length - 1) }
+            a.target.className = "container " + btn.id.charAt((btn.id).length - 1)
+            data.blocks.splice(a.target.id, 1, newObject)
+        }
+    }
+}
 
-    deleteButton.addEventListener("click", function () {
-        containers.forEach((container) => {
-            container.addEventListener('click', function () {
-                container.remove()
-            })
-        });
+// Fonction d'affichage des menus
+
+function showHide () {
+    const menu = document.querySelector('.menu');
+    const add = document.querySelector('.add');
+    const edit = document.querySelector('.edit');
+    const hiddenAddMenu = document.querySelector(".addMenu");
+    const hiddenEditMenu = document.querySelector(".editMenu");
+
+    add.addEventListener('mouseover', () => {
+        addMenu.style.display = "flex";
+        hiddenAddMenu.onmouseover = function () {
+            addMenu.style.display = "flex";
+        }
     })
+    
+    edit.addEventListener('mouseover', () => {
+        editMenu.style.display = "flex";
+        hiddenEditMenu.onmouseover = function () {
+            editMenu.style.display = "flex";
+        }
+    })
+    
+    menu.addEventListener('mouseout', () => {
+        addMenu.style.display = "none";
+        editMenu.style.display = "none";
+    })
+}
+//#######################################################################
+//#######################################################################
+//#######################################################################
+
+function readJSONBlocks(type, data, i) {
+    let newDiv = document.createElement('div');
+    newDiv.className = 'container ' + type;
+    document.querySelector('.division').appendChild(newDiv);
+    let newBox = document.createElement('div');
+    newBox.className = "box1";
+    newDiv.id = i
+    newDiv.appendChild(newBox);
+    newBox = document.createElement('div');
+    newBox.className = "box2";
+    newDiv.appendChild(newBox);
+    addObstacle(type, newDiv);
+}
+
+function save(content, fileName) {
+    let a = document.createElement("a");
+    let file = new Blob([content]);
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
+}
+
+function saveDataJSON(elements, data, i) {
+    let String = elements.childNodes[i].className
+    let JSONObject = { type: String.substr(String.length - 1) }
+    data.blocks.push(JSONObject)
 }
 
 function loadEditJSON(levelURI) {
@@ -108,21 +132,20 @@ function loadEditJSON(levelURI) {
                 readJSONBlocks(data.blocks[i].type, data, i)
                 i++
             }
-            document.querySelector('.Add').addEventListener('click', () => {
-                addMenu.style.visibility = showHide(addMenu.style.visibility)})
-                
-            
-            AddBlock('A', data)
-            AddBlock('B', data)
-            AddBlock('C', data)
+
+            showHide();
+
+            addBlock('A', data)
+            addBlock('B', data)
+            addBlock('C', data)
 
             let containers = document.querySelector(".division").querySelectorAll(".container");
-            document.querySelectorAll("#blocks").forEach(el => el.addEventListener('click',(a) => {
-                editMenu.style.visibility = showHide(editMenu.style.visibility)
-                EditBlock(data,a,editMenu)
-                delBlock(a,data,delMenu)}
-            ))
-            deleteContainer();
+            containers.forEach((container) => {
+                container.addEventListener('click', (a) => {
+                    editBlock(data, a, editMenu)
+                    delBlock(a, data, delMenu)
+                })
+            })
 
             containers.forEach((container) => {
                 data.blocks = []
@@ -134,8 +157,7 @@ function loadEditJSON(levelURI) {
             })
             let jsonData = JSON.stringify(data);
         })
+
 }
 
-
-//
 loadEditJSON("./scripts/levels/level1.json")

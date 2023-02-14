@@ -53,22 +53,41 @@
                 <section class="division">
                 </section>
             </div>
-            <div class="floor"></div>
+            <div class="floor">
+                <div class="floor1">
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                        <img src="./assets/images/floor.png" alt="Le sol">
+                    </div>
+                </div>
+            </div>
         </div>
         <script>
-            let isPassed = setInterval(function () {
-                let containers = document.querySelectorAll(".container");
-                let zone = document.querySelector(".zone");
-                let division = document.querySelector(".division")
-                containers.forEach((container) => {
-                let containerRight = parseInt(container.getBoundingClientRect().right);
-                let zoneLeft = parseInt(zone.getBoundingClientRect().left);
-                if (containerRight <= zoneLeft) {
-                    container.style.visibility = "hidden";
-                    // container.remove();
-                }
-                })
-            }, 100);
+            // let isPassed = setInterval(function () {
+            //     let containers = document.querySelectorAll(".container");
+            //     let zone = document.querySelector(".zone");
+            //     let division = document.querySelector(".division")
+            //     containers.forEach((container) => {
+            //     let containerRight = parseInt(container.getBoundingClientRect().right);
+            //     let zoneLeft = parseInt(zone.getBoundingClientRect().left);
+            //     if (containerRight <= zoneLeft) {
+            //         container.style.visibility = "hidden";
+            //         // container.remove();
+            //     }
+            //     })
+            // }, 100);
 
             // let isComing = setInterval(function () {
             //     let 
@@ -79,6 +98,7 @@
         <script src="./scripts/collisions.js"></script>
         <script src="./scripts/jump-crouch.js"></script>
         <script src="./scripts/animation-runner.js"></script>
+        <script src="./scripts/revert-layer.js"></script>
         <!-- <script src="./scripts/editSaveJSON.js"></script> -->
     </body>
 </html>

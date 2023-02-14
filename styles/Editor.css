@@ -1,13 +1,15 @@
 .menu {
-  display: none;
+  width: auto;
   position: absolute;
   z-index: 999;
+  display: none;
 }
 
 .options,
-.addMenu {
-  display: block;
-  /* flex-direction: column; */
+.addMenu,
+.editMenu {
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.481);
   text-align: center;
   background-color: white;
@@ -15,22 +17,20 @@
   font-size: 13px;
   font-family: Video, monospace;
 }
-.addMenu {
-  height: 73.5px;
-  margin: -24px 0 0 4px;
+
+.addMenu,
+.editMenu {
+  position: relative;
+  height: auto;
 }
+
 .menuOption,
-.add {
+.add,
+.edit {
   display: flex;
-  padding: 8px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-
-.add {
-  padding: 4px;
-  
 }
 
 .right-arrow {
@@ -39,5 +39,5 @@
 
 p {
   cursor: pointer;
-  ;
+  padding: 8px;
 }
