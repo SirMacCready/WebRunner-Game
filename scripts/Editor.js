@@ -2,6 +2,7 @@
 // FRONT CODE
 //#######################################################################
 
+
 // Déclaration de variables
 
 const addMenu = document.querySelector('#addMenu');
@@ -11,30 +12,39 @@ const delMenu = document.querySelector('.delete');
 addMenu.style.display = 'none';
 editMenu.style.display = 'none';
 
+
 // Fonction ajout de blocks
 
 function addBlock(type, data) {
     const containers = document.querySelectorAll(".container");
-    document.querySelector('#add' + type).addEventListener('click', () => {
-        let blockNum = (data.blocks).length
-        newObject = { "type": type }
-        let newDiv = document.createElement('div');
-        newDiv.classList = 'container ' + type;
-        newDiv.id = blockNum
-        data["blocks"].push(newObject)
-        document.querySelector('.division').appendChild(newDiv);
-        let newBox = document.createElement('div');
-        newBox.className = "box1";
-        newDiv.appendChild(newBox);
-        newBox = document.createElement('div');
-        newBox.className = "box2";
-        newDiv.appendChild(newBox);
-        if (type == "B" || type == "C") {
-            addObstacle(type, newDiv);
-        }
-        // deleteContainer()
+    const menuItems = document.querySelector('#add' + type);
+
+    function addBlock(e) {
+        menuItems.addEventListener('click', function () {
+            let blockNum = (data.blocks).length
+            newObject = { "type": type }
+            let newDiv = document.createElement('div');
+            newDiv.classList = 'container ' + type;
+            newDiv.id = blockNum
+            data["blocks"].push(newObject)
+            e.target.after(newDiv);
+            let newBox = document.createElement('div');
+            newBox.className = "box1";
+            newDiv.appendChild(newBox);
+            newBox = document.createElement('div');
+            newBox.className = "box2";
+            newDiv.appendChild(newBox);
+            if (type == "A" || type == "B" || type == "C") {
+                addObstacle(type, newDiv);
+            }
+            removeEventListener('click', addBlock)
+        })
+    }
+    containers.forEach((container) => {
+        container.addEventListener('click', addBlock);
     })
 }
+
 
 // Fonction de délétion de block
 
@@ -57,13 +67,13 @@ function editBlock(data, a, editMenu) {
     editMenu.onclick = (bt) => {
         let btn = bt.target.parentElement
         if (btn.id != "del") {
-            let newObject = { "type": btn.id.substr(btn.id.length - 1)}
+            let newObject = { "type": btn.id.substr(btn.id.length - 1) }
             console.log(a.target.id)
             a.target.className = "container " + btn.id.charAt((btn.id).length - 1)
             data.blocks.splice(a.target.id, 1, newObject)
-            if (btn.id.substr(btn.id.length - 1) == "A" 
-            || btn.id.substr(btn.id.length - 1) == "B"
-            || btn.id.substr(btn.id.length - 1) == "C") {
+            if (btn.id.substr(btn.id.length - 1) == "A"
+                || btn.id.substr(btn.id.length - 1) == "B"
+                || btn.id.substr(btn.id.length - 1) == "C") {
                 addObstacle(btn.id.substr(btn.id.length - 1), a.target);
             }
         }
@@ -72,7 +82,7 @@ function editBlock(data, a, editMenu) {
 
 // Fonction d'affichage des menus
 
-function showHide () {
+function showHide() {
     const menu = document.querySelector('.menu');
     const add = document.querySelector('.add');
     const edit = document.querySelector('.edit');
@@ -85,19 +95,20 @@ function showHide () {
             addMenu.style.display = "flex";
         }
     })
-    
+
     edit.addEventListener('mouseover', () => {
         editMenu.style.display = "flex";
         hiddenEditMenu.onmouseover = function () {
             editMenu.style.display = "flex";
         }
     })
-    
+
     menu.addEventListener('mouseout', () => {
         addMenu.style.display = "none";
         editMenu.style.display = "none";
     })
 }
+
 //#######################################################################
 //#######################################################################
 //#######################################################################
@@ -143,7 +154,7 @@ function loadEditJSON(levelURI) {
             addBlock('A', data)
             addBlock('B', data)
             addBlock('C', data)
-            
+
             showHide();
 
             document.addEventListener('click', function (e) {
