@@ -13,7 +13,7 @@
    /* align-items: flex-end; */
    width: 100vw;
    height: 100vh;
-   overflow: hidden;
+   /* overflow: hidden; */
  }
 
  .game {
@@ -77,7 +77,7 @@
    position: relative;
    display: flex;
    flex-direction: row;
-   /* justify-content: flex-end; */
+   justify-content: flex-start;
    width: auto;
    height: 240px;
    /* overflow: scroll; */
