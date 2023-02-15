@@ -150,6 +150,7 @@ function loadEditJSON(levelURI) {
                 if (hasClass(e.target, 'container')) {
                     editBlock(data, e, editMenu);
                     delBlock(e, data, delMenu);
+                    readJSONBlocks(data.blocks[i].type, data, i);
                 }
             }, false);
 
