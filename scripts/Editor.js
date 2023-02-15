@@ -161,6 +161,9 @@ function loadEditJSON(levelURI) {
                 if (hasClass(e.target, 'container')) {
                     editBlock(data, e, editMenu);
                     delBlock(e, data, delMenu);
+                    while (i != (data.blocks).length - 1) {
+                        readJSONBlocks(data.blocks[i].type, data, i)
+                        i++}
                 }
             }, false);
 
@@ -192,6 +195,6 @@ function loadEditJSON(levelURI) {
             })
         })
 
-}
+}//
 
 loadEditJSON("./scripts/levels/level1.json")
