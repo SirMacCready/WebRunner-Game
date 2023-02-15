@@ -184,6 +184,6 @@ function loadEditJSON(levelURI) {
             })
         })
 
-}
+}//
 
 loadEditJSON("./scripts/levels/level1.json")
