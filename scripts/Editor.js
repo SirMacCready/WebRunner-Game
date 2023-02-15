@@ -54,11 +54,18 @@ function delBlock(a, data, delMenu) {
 
 function editBlock(data, a, editMenu) {
     editMenu.onclick = (bt) => {
-        let btn = bt.target
+        let btn = bt.target.parentElement
+        console.log(btn);
         if (btn.id != "del") {
-            let newObject = { "type": btn.id.substr(btn.id.length - 1) }
+            let newObject = { "type": btn.id.substr(btn.id.length - 1)}
+            console.log(btn.id.substr(btn.id.length - 1))
             a.target.className = "container " + btn.id.charAt((btn.id).length - 1)
             data.blocks.splice(a.target.id, 1, newObject)
+            if (btn.id.substr(btn.id.length - 1) == "A" 
+            || btn.id.substr(btn.id.length - 1) == "B"
+            || btn.id.substr(btn.id.length - 1) == "C") {
+                addObstacle(btn.id.substr(btn.id.length - 1), a.target);
+            }
         }
     }
 }
