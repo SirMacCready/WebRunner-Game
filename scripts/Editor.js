@@ -14,6 +14,7 @@ editMenu.style.display = 'none';
 // Fonction ajout de blocks
 
 function addBlock(type, data) {
+    const containers = document.querySelectorAll(".container");
     document.querySelector('#add' + type).addEventListener('click', () => {
         let blockNum = (data.blocks).length
         newObject = { "type": type }
@@ -55,10 +56,9 @@ function delBlock(a, data, delMenu) {
 function editBlock(data, a, editMenu) {
     editMenu.onclick = (bt) => {
         let btn = bt.target.parentElement
-        console.log(btn);
         if (btn.id != "del") {
             let newObject = { "type": btn.id.substr(btn.id.length - 1)}
-            console.log(btn.id.substr(btn.id.length - 1))
+            console.log(a.target.id)
             a.target.className = "container " + btn.id.charAt((btn.id).length - 1)
             data.blocks.splice(a.target.id, 1, newObject)
             if (btn.id.substr(btn.id.length - 1) == "A" 
@@ -140,19 +140,31 @@ function loadEditJSON(levelURI) {
                 i++
             }
 
-            showHide();
-
             addBlock('A', data)
             addBlock('B', data)
             addBlock('C', data)
+            
+            showHide();
 
-            let containers = document.querySelector(".division").querySelectorAll(".container");
-            containers.forEach((container) => {
-                container.addEventListener('click', (a) => {
-                    editBlock(data, a, editMenu)
-                    delBlock(a, data, delMenu)
-                })
-            })
+            document.addEventListener('click', function (e) {
+                if (hasClass(e.target, 'container')) {
+                    editBlock(data, e, editMenu);
+                    delBlock(e, data, delMenu);
+                }
+            }, false);
+
+            function hasClass(elem, className) {
+                return elem.className.split(' ').indexOf(className) > -1;
+            }
+
+            // let containers = document.querySelector(".division").querySelectorAll(".container");
+            // containers.forEach((container) => {
+            //     container.addEventListener('click', (a) => {
+            //         console.log(a.target)
+            //         editBlock(data, a, editMenu)
+            //         delBlock(a, data, delMenu)
+            //     })
+            // })
 
             containers.forEach((container) => {
                 data.blocks = []
@@ -162,7 +174,11 @@ function loadEditJSON(levelURI) {
                     i++
                 }
             })
-            let jsonData = JSON.stringify(data);
+            document.querySelector(".download").addEventListener('click', () => {
+                title = prompt("Entrer le nom du fichier:")
+                let jsonData = JSON.stringify(data)
+                save(jsonData, title)
+            })
         })
 
 }
