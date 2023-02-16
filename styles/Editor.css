@@ -16,21 +16,18 @@
   border-radius: 8px;
   font-size: 13px;
   font-family: Video, monospace;
-}
-
-.addMenu,
-.editMenu {
   position: relative;
-  height: auto;
+  overflow: hidden;
 }
 
-.menuOption,
-.add,
-.edit {
+.option,
+.add1,
+.edit1 {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .right-arrow {
