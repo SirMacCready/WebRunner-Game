@@ -41,6 +41,7 @@ function addBlock(a, data, addMenu) {
                 addObstacle(btn.id.substr(btn.id.length - 1), newDiv);
             }
         }
+        displayNumber(data)
     }
 }
 
@@ -72,8 +73,8 @@ function delBlock(a, data, delMenu) {
             a.target.remove()
             data.blocks.splice(a.target.id, 1)
             oldA = a
-            return
         }
+        displayNumber(data)
     }
 }
 
@@ -112,17 +113,15 @@ function showHide() {
 //#######################################################################
 //#######################################################################
 
-function displayNumber() {
+function displayNumber(data) {
     const num = document.querySelector(".num");
-    const containers = document.querySelectorAll(".container");
 
-    num.innerText = `Nombre de div: ${containers.length}`;
+    num.innerText = `Nombre de blocks: ${data.blocks.length}`;
 }
 
 function readJSONBlocks(type, data, i) {
     let newDiv = document.createElement('div');
     newDiv.className = 'container ' + type;
-    document.querySelector('.division').appendChild(newDiv);
     let newBox = document.createElement('div');
     newBox.className = "box1";
     newDiv.id = i
@@ -130,6 +129,7 @@ function readJSONBlocks(type, data, i) {
     newBox = document.createElement('div');
     newBox.className = "box2";
     newDiv.appendChild(newBox);
+    document.querySelector('.division').appendChild(newDiv);
     addObstacle(type, newDiv);
 }
 
@@ -165,14 +165,14 @@ function loadEditJSON(levelURI) {
                 return elem.className.split(' ').indexOf(className) > -1;
             }
 
+            displayNumber(data)
+
             document.querySelector(".download").addEventListener('click', () => {
                 title = prompt("Entrer le nom du fichier:")
                 let jsonData = JSON.stringify(data)
                 save(jsonData, title)
             })
-            displayNumber()
         })
-    
 }
 
 loadEditJSON("./scripts/levels/level1.jmpr")
