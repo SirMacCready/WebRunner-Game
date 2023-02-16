@@ -40,7 +40,7 @@ function addBlock(a, data, addMenu) {
             if (btn.id.substr(btn.id.length - 1) == "A"
                 || btn.id.substr(btn.id.length - 1) == "B"
                 || btn.id.substr(btn.id.length - 1) == "C") {
-                addObstacle(btn.id.substr(btn.id.length - 1), newDi);
+                addObstacle(btn.id.substr(btn.id.length - 1), newDiv);
             }
         }
     }
