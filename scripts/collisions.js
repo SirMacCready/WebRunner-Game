@@ -1,3 +1,4 @@
+let points = 0
 let isAlive = setInterval(function () {
   let player = document.querySelector(".player-rpg");
 
