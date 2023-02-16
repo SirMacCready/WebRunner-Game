@@ -10,16 +10,6 @@
     </head>
     <style>
 
-  /* @keyframes horizontal-scroll {
-    0% {
-        right: -64px;
-    }
-
-    100% {
-        right: 896px;
-    }
-  } */
-
   @keyframes translation {
     0% {
         right: 0px;
@@ -28,8 +18,48 @@
         right: 1440px;
     }
   }
+
+  .background,
+  .foreground {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    width: auto;
+    z-index: -1;
+  }
+
+  .foreground {
+    top: 24px;
+  }
+
+  .background img,
+  .foreground img {
+    object-fit: cover;
+    object-position: center;
+    width: 120%;
+    animation: foreground 5s;
+  }
+
+  @keyframes foreground {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: -1440px;
+    }
+  }
 </style>
     <body>
+        <div class="background">
+            <img src="./assets/images/ciel.png" alt="" class="sky">
+        </div>
+        <div class="foreground">
+            <img src="./assets/images/arbres.png" alt="Des arbres"
+                class="trees">
+            <img src="./assets/images/arbres.png" alt="Des arbres"
+                class="trees">
+        </div>
         <div class="game">
             <div class="zone">
                 <div class="player-rpg" id="player-rpg">
@@ -74,6 +104,7 @@
                 </div>
             </div>
         </div>
+        <script src="./scripts/audio.js"></script>
         <script src="./scripts/index.js"></script>
         <script src="./scripts/addObstacles.js"></script>
         <script src="./scripts/collisions.js"></script>
