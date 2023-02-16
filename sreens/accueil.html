@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href = "../styles/accueil.css">
-    <title>Forest Run</title>
-</head>
-<body>
-    <header>
-        
-        <div class="score">
-            Score
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles/accueil.css">
+        <title>Forest Run</title>
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <p><a href="">Paramètres</a></p>
+                <p><a href=""> Informations</a></p>
+                <p><a href="">Editer</a></p>
+            </div>
+            <div class="score">
+                Score
+            </div>
+        </header>
+        <div class="center">
+            <div class="titre">
+                <h1>Forest Run</h1>
+            </div>
+            <div class="niveau">
+                <div class="skip" id="precedent" onclick="ChangeLevel(-1)">&lt;</div>
+                <div id="liste-niveau">Découverte</div>
+                <div class="skip" id="suivant" onclick="ChangeLevel(1)">&gt;</div>
+            </div>
+            <div class="boutton">
+                <a href="">Play</a>
+            </div>
         </div>
-        <div class="nav">
-            <a href="">Paramètres</a>
-            <a href=""> Informations</a>
-            <a href="">Editer</a>
-        </div>
-    </header>
-    <div class="titre">
-        <h1>Forest Run</h1>
-    </div>
-    <div class="niveau">
-        <div class="skip" id="precedent" onclick="ChangeLevel(-1)">&lt;</div> 
-        <div id="liste-niveau" >Découverte</div>
-        <div class="skip" id="suivant" onclick="ChangeLevel(1)">&gt;</div>
-    </div>
-    <div class="boutton">
-        <a href="">Play</a>
-    </div>
-    <script src="../scripts/slider.js"></script>
-</body>
+        <script src="../scripts/slider.js"></script>
+    </body>
 </html>

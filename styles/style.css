@@ -13,6 +13,7 @@
    /* align-items: flex-end; */
    width: 100vw;
    height: 100vh;
+   overflow: hidden;
  }
 
  .game {
@@ -92,7 +93,7 @@
     width: 120px;
     display: flex;
     align-items: center;
-    /* animation: translation 5s linear; */
+    animation: translation 5s linear;
     border: 1px solid rgb(0, 0, 0);
     transition: 0.5s;
   }

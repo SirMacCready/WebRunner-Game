@@ -1,7 +1,7 @@
 function addObstacle(type, newDiv) {
   const box1 = newDiv.querySelector(".box1");
   const box2 = newDiv.querySelector(".box2");
-  
+
   if (type == "A") {
     if (box1.querySelector("img")) {
       box1.querySelectorAll("img").forEach((image) => {
@@ -20,7 +20,7 @@ function addObstacle(type, newDiv) {
     let random = Math.floor(Math.random() * 3);
     let image = document.createElement("img");
 
-    image.src = `./assets/images/obstacle-down/${images[random]}-mushroom.png`;
+    image.src = `./../assets/images/obstacle-down/${images[random]}-mushroom.png`;
     image.classList = "image obstacle down-obstacle";
 
     box2.appendChild(image);
@@ -32,7 +32,7 @@ function addObstacle(type, newDiv) {
 
     for (let i = 1; i <= 7; i++) {
       let image = document.createElement("img");
-      image.src = `./assets/images/obstacle-up/bird${i}.png`;
+      image.src = `./../assets/images/obstacle-up/bird${i}.png`;
       image.style.display = "none";
       image.classList = "image obstacle up-obstacle";
       box1.appendChild(image);
@@ -40,7 +40,7 @@ function addObstacle(type, newDiv) {
 
     for (let i = 7; i >= 1; i--) {
       let image = document.createElement("img");
-      image.src = `./assets/images/obstacle-up/bird${i}.png`;
+      image.src = `./../assets/images/obstacle-up/bird${i}.png`;
       image.style.display = "none";
       image.classList = "image obstacle up-obstacle";
       box1.appendChild(image);

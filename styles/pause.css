@@ -31,7 +31,7 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 
 body{
-    background-image: url(./background/pause.png);
+    background-image: url('../assets/background/pause.png');
     height: 100vh;
     background-size: cover;
     background-position: center;
