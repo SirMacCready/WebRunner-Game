@@ -157,6 +157,15 @@
    position: absolute;
  }
 
+ .num {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  color: black;
+  border: 1px solid black;
+  padding: 4px;
+ }
+
  @keyframes jump {
    0% {
      bottom: 0;

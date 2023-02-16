@@ -15,8 +15,6 @@ editMenu.style.display = 'none';
 // Fonction d'ajout de block
 
 function addBlock(a, data, addMenu) {
-    // const containers = document.querySelectorAll(".container");
-    // const menuItems = document.querySelectorAll(".add");
 
     addMenu.onclick = (bt) => {
         let btn = bt.target.parentElement
@@ -44,43 +42,6 @@ function addBlock(a, data, addMenu) {
             }
         }
     }
-    // containers.forEach((container) => {
-    //     container.addEventListener('click', function addBlock1(e) {
-    //         menuItems.forEach((menuItem) => {
-    //             menuItem.addEventListener('click', function (a) {
-    //                 let newDiv = document.createElement('div');
-    //                 if (a.target.classList.contains("A")) {
-    //                     newDiv.classList = 'container ' + "A";
-    //                     newObject = { "type": "A" }
-    //                     // newDiv.id = parseInt(e.target.id);
-    //                 } else if (a.target.classList.contains("B")) {
-    //                     newDiv.classList = 'container ' + "B";
-    //                     newObject = { "type": "B" }
-    //                     // newDiv.id = parseInt(e.target.id);
-    //                 } else if (a.target.classList.contains("C")) {
-    //                     newDiv.classList = 'container ' + "C";
-    //                     newObject = { "type": "C" }
-    //                     // newDiv.id = parseInt(e.target.id);
-    //                 }
-    //                 let newBox = document.createElement('div');
-    //                 newBox.className = "box1";
-    //                 newDiv.appendChild(newBox);
-    //                 let newBox2 = document.createElement('div');
-    //                 newBox2.className = "box2";
-    //                 newDiv.appendChild(newBox2);
-    //                 e.target.after(newDiv);
-    //                 data.blocks.splice(parseInt(e.target.id) + 1, 0, newObject)
-    //                 for (let i = parseInt(e.target.id); i < containers.length; i++) {
-    //                     containers[i].id = parseInt(containers[i].id) + 1;
-    //                 }
-    //                 if (type == "A" || type == "B" || type == "C") {
-    //                     addObstacle(type, newDiv);
-    //                 }
-    //             })
-    //             container.removeEventListener('click', addBlock1)
-    //         })
-    //     })
-    // })
 }
 
 // Fonction d'édit de block
@@ -151,6 +112,13 @@ function showHide() {
 //#######################################################################
 //#######################################################################
 
+function displayNumber() {
+    const num = document.querySelector(".num");
+    const containers = document.querySelectorAll(".container");
+
+    num.innerText = `Nombre de div: ${containers.length}`;
+}
+
 function readJSONBlocks(type, data, i) {
     let newDiv = document.createElement('div');
     newDiv.className = 'container ' + type;
@@ -183,7 +151,6 @@ function loadEditJSON(levelURI) {
                 i++
             }
 
-
             showHide();
 
             document.addEventListener('click', function (e) {
@@ -203,8 +170,9 @@ function loadEditJSON(levelURI) {
                 let jsonData = JSON.stringify(data)
                 save(jsonData, title)
             })
+            displayNumber()
         })
-
+    
 }
 
 loadEditJSON("./scripts/levels/level1.jmpr")
