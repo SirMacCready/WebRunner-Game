@@ -15,6 +15,9 @@ let isAlive = setInterval(function () {
       alert("Game Over");
       // gameOver();
     }
+    else if (playerRight > obstacleDownLeft && playerRight - 64 > obstacleDownLeft && playerBottom < obstacleDownTop){
+      points = points = points + 10 * difficulty
+    }
   })
 
   let obstaclesUp = document.querySelectorAll(".up-obstacle");
@@ -26,6 +29,9 @@ let isAlive = setInterval(function () {
     if (playerRight >= obstacleUpLeft && playerRight - 64 <= obstacleUpLeft && playerTop <= obstacleUpBottom) {
       alert("Game Over");
       // gameOver();
+    }
+    else if (playerRight > obstacleUpLeft && playerRight - 64 > obstacleUpLeft && playerTop < obstacleUpBottom){
+      points = points = points + 10 * difficulty
     }
   })
 }, 100);
