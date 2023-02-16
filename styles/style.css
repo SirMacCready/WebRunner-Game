@@ -13,7 +13,7 @@
    /* align-items: flex-end; */
    width: 100vw;
    height: 100vh;
-   overflow-y: hidden;
+   overflow: hidden;
  }
 
  .game {
@@ -82,21 +82,21 @@
    width: auto;
    height: 240px;
    /* overflow: scroll; */
-  }
-  
-  .game .zone .division .container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 0;
-    height: 240px;
-    width: 120px;
-    display: flex;
-    align-items: center;
-    animation: translation 5s linear;
-    transition: 0.5s;
-  }
-  
+ }
+
+ .game .zone .division .container {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   bottom: 0;
+   height: 240px;
+   width: 120px;
+   display: flex;
+   align-items: center;
+   animation: translation 5s linear;
+   transition: 0.5s;
+ }
+
 
  .game .zone .division .container>div {
    display: flex;
@@ -122,10 +122,12 @@
 
  .game .floor {
    display: flex;
-   flex-direction: column;
+   flex-direction: row;
    position: relative;
    width: auto;
    height: auto;
+   animation: translation 5s linear;
+
  }
 
  .game .floor .floor2 {
@@ -155,12 +157,12 @@
  }
 
  .num {
-  position: absolute;
-  top: 80px;
-  right: 80px;
-  color: black;
-  border: 1px solid black;
-  padding: 4px;
+   position: absolute;
+   top: 80px;
+   right: 80px;
+   color: black;
+   border: 1px solid black;
+   padding: 4px;
  }
 
  @keyframes jump {
