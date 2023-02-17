@@ -22,7 +22,6 @@ function addBlock(a, data, addMenu) {
             let newObject = { "type": btn.id.substr(btn.id.length - 1) }
             let newDiv = document.createElement('div');
             newDiv.classList = 'container ' + btn.id.substr(btn.id.length - 1);
-            console.log(newDiv.classList)
             newDiv.id = parseInt(a.target.id) + 1;
             for (let i = parseInt(newDiv.id); i < containers.length; i++) {
                 containers[i].id = parseInt(containers[i].id) + 1;
@@ -68,7 +67,6 @@ function editBlock(a, data, editMenu) {
 function delBlock(a, data, delMenu) {
     let oldA = null
     delMenu.onclick = (bt) => {
-        let btn = bt.target
         if (oldA != a) {
             a.target.remove()
             data.blocks.splice(a.target.id, 1)
@@ -117,6 +115,31 @@ function displayNumber(data) {
     const num = document.querySelector(".num");
 
     num.innerText = `Nombre de blocks: ${data.blocks.length}`;
+    return data.blocks.length;
+}
+
+function numberOfBlocks(levelURI) {
+    fetch(levelURI)
+        .then((param) => param.json())
+        .then((data) => {
+            let number = data.blocks.length;
+            console.log(number);
+
+            document.addEventListener('click', function (e) {
+                if (hasClass(e.target, 'add1')) {
+                    console.log("ok")
+                    number++
+                } else if (hasClass(e.target, 'delete')) {
+                    console.log("ok")
+                    number--
+                }
+            }, false);
+
+            function hasClass(elem, className) {
+                return elem.className.split(' ').indexOf(className) > -1;
+            }
+            // console.log(number)
+        })
 }
 
 function readJSONBlocks(type, data, i) {
@@ -165,8 +188,6 @@ function loadEditJSON(levelURI) {
                 return elem.className.split(' ').indexOf(className) > -1;
             }
 
-            displayNumber(data)
-
             document.querySelector(".download").addEventListener('click', () => {
                 title = prompt("Entrer le nom du fichier:")
                 let jsonData = JSON.stringify(data)
@@ -175,4 +196,6 @@ function loadEditJSON(levelURI) {
         })
 }
 
-loadEditJSON("./scripts/levels/level1.jmpr")
+loadEditJSON("./scripts/levels/level1.jmpr");
+let number1 = numberOfBlocks("./scripts/levels/level1.jmpr");
+console.log(number1)

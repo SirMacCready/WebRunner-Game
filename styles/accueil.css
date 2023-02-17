@@ -43,14 +43,22 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    width: 100%;
     border: 0.5px solid #fff;
 }
 
@@ -62,12 +70,13 @@ header {
 
 .nav p {
     font-family: inherit;
+    margin-left: 32px;
+    padding: 10px 10px;
 }
+
 a {
     font-family: Video, monospace;
     text-decoration: none;
-    margin-right: 90px;
-    padding: 10px 10px;
 }
 
 a:hover {
@@ -76,33 +85,47 @@ a:hover {
     border-radius: 50px;
 }
 
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .titre h1 {
     font-size: 173px;
     position: relative;
-    margin-top: 200px;
-    margin-left: 246px;
     font-family: "video", serif;
     text-align: center;
 }
 
 .niveau {
     font-size: 90px;
-    margin-left: 350px;
-    margin-bottom: 30px;
     display: flex;
-    width: 1080px;
     align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.niveau .skip img {
+    width: 56px;
 }
 
 .niveau #precedent,
 .niveau #suivant {
-    padding: 0px 25px;
-    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 102px;
+    height: 102px;
+    border-radius: 9999px;
     margin: 25px;
     background-color: transparent;
     border: 1px solid #fff;
 
 }
+
+
 
 .niveau a:hover {
     color: #000063;
@@ -112,7 +135,6 @@ a:hover {
 
 
 #liste-niveau {
-    margin-top: 25px;
     font-family: "IBM-Light";
     border: transparent;
     background-color: transparent;
@@ -122,8 +144,11 @@ a:hover {
 .score {
     font-family: "Video";
     float: right;
-    margin-right: 10px;
-    margin-top: 20px;
+    margin-right: 32px;
+}
+
+.boutton {
+    margin-top: 64px;
 }
 
 .boutton a {
@@ -133,7 +158,6 @@ a:hover {
     font-family: "IBM-SemiBold";
     font-size: 45px;
     background-color: #fff;
-    margin-left: 590px;
     padding: 23px 77px;
     border-radius: 50px;
 }
