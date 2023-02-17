@@ -1,7 +1,7 @@
 .game .zone .division .container {
-  border: 1px solid rgb(159, 159, 159);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .game .zone .division .container:hover {
-  background-color: rgba(117, 117, 117, 0.635);
+  background-color: rgba(255, 255, 255, 0.635);
 }

@@ -22,7 +22,7 @@ function loadEditJSON(levelURI) {
         readJSONBlocks(data.blocks[i].type, data, i)
         i++
       }
-      displayNumber()
+      // displayNumber()
     })
 
 }

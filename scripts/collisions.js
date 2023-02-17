@@ -2,20 +2,17 @@ let points     = 0
 let difficulty = 1
 let passed     = false
 let gameOver   = false 
+
 let isAlive = setInterval(function () {
   let player = document.querySelector(".player-rpg");
-
+  
   let playerRight = parseInt(player.getBoundingClientRect().right);
   let playerTop = parseInt(player.getBoundingClientRect().top);
   let playerBottom = parseInt(player.getBoundingClientRect().bottom);
-
+  
   let obstaclesDown = document.querySelectorAll(".down-obstacle");
   
-  
 
-  if (gameOver != true) {
-    points = points + 1
-  } 
   obstaclesDown.forEach((obstacleDown) => {
     let obstacleDownLeft = parseInt(obstacleDown.getBoundingClientRect().left);
     let obstacleDownTop = parseInt(obstacleDown.getBoundingClientRect().top);
@@ -29,6 +26,7 @@ let isAlive = setInterval(function () {
       passed = false
       points = points + 10 * difficulty
     }
+    console.log(points);
   })
 
   let obstaclesUp = document.querySelectorAll(".up-obstacle");

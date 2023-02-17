@@ -93,7 +93,6 @@
    width: 120px;
    display: flex;
    align-items: center;
-   animation: translation 5s linear;
    transition: 0.5s;
  }
 
@@ -126,8 +125,6 @@
    position: relative;
    width: auto;
    height: auto;
-   animation: translation 5s linear;
-
  }
 
  .game .floor .floor2 {
@@ -184,4 +181,41 @@
    100% {
      bottom: 0px;
    }
+ }
+
+ @keyframes translation {
+   0% {
+     right: 0px;
+   }
+
+   100% {
+     right: 1440px;
+   }
+ }
+
+ .background,
+ .foreground {
+   display: flex;
+   flex-direction: row;
+   position: absolute;
+   top: 0;
+   height: 75%;
+   /* width: auto; */
+   z-index: -1;
+ }
+
+ .foreground {
+   top: 24px;
+ }
+
+ .background img,
+ .foreground img {
+
+   object-fit: cover;
+   object-position: center;
+   width: 120%;
+ }
+
+ .background img {
+   width: 100%;
  }
