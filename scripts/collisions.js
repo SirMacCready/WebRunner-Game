@@ -20,10 +20,7 @@ let isAlive = setInterval(function () {
     let obstacleDownLeft = parseInt(obstacleDown.getBoundingClientRect().left);
     let obstacleDownTop = parseInt(obstacleDown.getBoundingClientRect().top);
     if (playerRight >= obstacleDownLeft && playerRight - 64 <= obstacleDownLeft && playerBottom >= obstacleDownTop) {
-      gameOver   = true 
-      alert("Game Over");
-      
-      // gameOver();
+      window.location.href = "./screens/final.html"
     }
     else if (playerRight - 64 > obstacleDownLeft + 64 && playerBottom > obstacleDownTop){
       passed     = true 
@@ -41,8 +38,7 @@ let isAlive = setInterval(function () {
     let obstacleUpBottom = parseInt(obstacleUp.getBoundingClientRect().bottom);
 
     if (playerRight >= obstacleUpLeft && playerRight - 64 <= obstacleUpLeft && playerTop <= obstacleUpBottom) {
-      alert("Game Over");
-      // gameOver();
+      window.location.href = "./screens/final.html"
     }
     else if (playerRight - 64 > obstacleDownLeft + 64 && playerTop < obstacleUpBottom){
       gameOver   = true
