@@ -88,6 +88,8 @@ function addBlock(a, data, addMenu) {
             let newDiv = document.createElement('div');
             newDiv.classList = 'container ' + btn.id.substr(btn.id.length - 1);
             newDiv.id = parseInt(a.target.id) + 1;
+            let containers = document.querySelectorAll(".container");
+            console.log(containers);
             for (let i = parseInt(newDiv.id); i < containers.length; i++) {
                 containers[i].id = parseInt(containers[i].id) + 1;
             }
@@ -134,6 +136,11 @@ function delBlock(a, data, delMenu) {
             a.target.remove()
             data.blocks.splice(a.target.id, 1)
             oldA = a
+        }
+        let containers = document.querySelectorAll(".container");
+        console.log(containers);
+        for (let i = parseInt(a.target.id); i < containers.length; i++) {
+            containers[i].id = parseInt(containers[i].id) - 1;
         }
         displayNumber(data)
     }
@@ -259,6 +266,6 @@ function loadEditJSON(levelURI) {
         })
 }
 
-loadEditJSON("./scripts/levels/level1.jmpr");
+loadEditJSON("./scripts/levels/levelx2.jmpr");
 // let number1 = numberOfBlocks("./scripts/levels/level1.jmpr");
 // console.log(number1)
