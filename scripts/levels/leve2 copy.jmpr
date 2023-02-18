@@ -437,11 +437,16 @@
     }
   ],
   "assets": {
-    "background": "../../assets/images/floor.png",
-    "middleground": "../../assets/images/arbres.png",
-    "foreground": "../../assets/images/ciel.png",
+    "background": "../../assets/images/ciel.png",
+    "middleground": "../../assets/images/floor.png",
+    "foreground": "../../assets/images/arbres.png",
     "upObstacle": "../../assets/images/bird.js",
     "downObstacle": "../../assets/images/mushrooms.js",
-    "melody": "../../assets/audio/?"
+    "croucher": "./assets/images/runner/runner_sat.png",
+    "jump1": "./assets/images/runner/runner_jump1.png",
+    "jump2": "./assets/images/runner/runner_jump2.png",
+    "jump3": "./assets/images/runner/runner_jump3.png",
+    "floor2": "./assets/images/floor.png"
+
   }
 }
