@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "home.css">
+    <script src="slider.js"></script>
+    <title>Forest Run</title>
+</head>
+<body>
+    <header>
+
+            <div class="score">
+                Score :
+            </div>
+            <div class="nav">
+                <a href="parametres.html">
+                    <img class="illus" src="./pictos/paramètres.png"></img>
+                    Paramètres</a>
+                <a href="informations.html"> 
+                    <img class="illus" src="./pictos/informations.png"></img>
+                    Informations</a>
+
+                <a href="">
+                    <img class="illus" src="./pictos/edit.png"></img>
+                    Editer</a>
+            </div>
+    </header>
+    <div class="main">
+        <div class="titre">
+            <h1>Forest Run</h1>
+        </div>
+        <div class="niveau">
+            <div class="skip" id="precedent" onclick="ChangeLevel(-1)">&lt;</div> 
+            <div id="liste-niveau" >Découverte</div>
+            <div class="skip" id="suivant" onclick="ChangeLevel(1)">&gt;</div>
+        </div>
+        <div class="boutton" >
+            <a href="">Play</a>
+        </div>
+    </div>
+</body>
+</html>
