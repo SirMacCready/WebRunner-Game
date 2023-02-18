@@ -204,6 +204,11 @@
    z-index: -1;
  }
 
+ .background {
+  left: 0;
+  right: 0;
+ }
+
  .foreground {
    top: 24px;
  }

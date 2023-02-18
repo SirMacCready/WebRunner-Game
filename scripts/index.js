@@ -27,4 +27,4 @@ function loadEditJSON(levelURI) {
 
 }
 
-loadEditJSON("./scripts/levels/level1.jmpr")
+loadEditJSON("./scripts/levels/example.jmpr")

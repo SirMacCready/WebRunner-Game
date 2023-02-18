@@ -13,9 +13,10 @@ function addObstacle(type, newDiv) {
     }
   } else if (type == "B") {
     if (box1.querySelector("img")) {
-      box1.querySelector("img").remove();
+      box1.querySelectorAll("img").forEach((image) => {
+        image.remove();
+      });
     }
-
     let images = ["blue", "red", "black"];
     let random = Math.floor(Math.random() * 3);
     let image = document.createElement("img");

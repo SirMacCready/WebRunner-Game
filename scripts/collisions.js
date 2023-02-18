@@ -16,17 +16,10 @@ let isAlive = setInterval(function () {
   obstaclesDown.forEach((obstacleDown) => {
     let obstacleDownLeft = parseInt(obstacleDown.getBoundingClientRect().left);
     let obstacleDownTop = parseInt(obstacleDown.getBoundingClientRect().top);
+
     if (playerRight >= obstacleDownLeft && playerRight - 64 <= obstacleDownLeft && playerBottom >= obstacleDownTop) {
       window.location.href = "./screens/final.html"
     }
-    else if (playerRight - 64 > obstacleDownLeft + 64 && playerBottom > obstacleDownTop){
-      passed     = true 
-    }
-    else if (passed === true && playerBottom === 472) {
-      passed = false
-      points = points + 10 * difficulty
-    }
-    console.log(points);
   })
 
   let obstaclesUp = document.querySelectorAll(".up-obstacle");
@@ -37,14 +30,6 @@ let isAlive = setInterval(function () {
 
     if (playerRight >= obstacleUpLeft && playerRight - 64 <= obstacleUpLeft && playerTop <= obstacleUpBottom) {
       window.location.href = "./screens/final.html"
-    }
-    else if (playerRight - 64 > obstacleDownLeft + 64 && playerTop < obstacleUpBottom){
-      gameOver   = true
-      passed     = true 
-    }
-    else if (passed === true && playerBottom === 472) {
-      passed = false
-      points = points + 10 * difficulty
     }
   })
 }, 100);

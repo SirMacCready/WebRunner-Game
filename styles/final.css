@@ -31,20 +31,27 @@
 
 
 body {
+    display: flex;
+    flex-direction: column;
     background-image: url("../assets/background/gameover.png");
     height: 100vh;
     background-size: cover;
     background-position: center;
+    justify-content: center;
+    align-items: center;
 }
 
 ul {
     list-style: none;
     float: left;
     display: flex;
-    margin-left: 356px;
+    margin-top: 32px;
 }
 
 .titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: "Video";
     text-transform: uppercase;
 }
@@ -52,21 +59,16 @@ ul {
 .titre h1 {
     font-size: 173px;
     position: static;
-    margin-top: 286px;
-    margin-left: 200px;
     color: #fff;
 }
 
 .titre h2 {
     font-size: 90px;
-    position: static;
     margin-bottom: 30px;
-    margin-left: 390px;
     color: #fff;
 }
 
 .bouttons li a {
-    position: static;
     text-decoration: none;
     color: #000063;
     font-size: 45px;
