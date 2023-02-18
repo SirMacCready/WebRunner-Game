@@ -183,15 +183,6 @@
    }
  }
 
- @keyframes translation {
-   0% {
-     right: 0px;
-   }
-
-   100% {
-     right: 1440px;
-   }
- }
 
  .background,
  .foreground {

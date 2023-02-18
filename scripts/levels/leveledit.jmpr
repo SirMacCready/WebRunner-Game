@@ -1,15 +1,12 @@
 {
-  "title": "Nom du niveau",
-  "creator": "John Doe",
+  "title": "Maîtrise",
+  "creator": "Mourad Akil",
   "difficulty": 1,
   "blocks": [
     {
       "type": "A"
     },
     {
-      "type": "B"
-    },
-    {
       "type": "A"
     },
     {
@@ -31,22 +28,24 @@
       "type": "A"
     },
     {
-      "type": "C"
-    },
-    {
       "type": "A"
     },
     {
       "type": "A"
     },
     {
-      "type": "B"
+      "type": "A"
+    },
+    {
+      "type": "A"
     }
   ],
   "assets": {
-    "background": "https://...",
-    "A": "https://...",
-    "B": "https://...",
-    "melody": "https://..."
+    "background": "../../assets/images/floor.png",
+    "middleground": "../../assets/images/arbres.png",
+    "foreground": "../../assets/images/ciel.png",
+    "upObstacle": "../../assets/images/bird.js",
+    "downObstacle": "../../assets/images/mushrooms.js",
+    "melody": "../../assets/audio/?"
   }
 }

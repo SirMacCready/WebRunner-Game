@@ -1,7 +1,7 @@
 {
-  "title": "Nom du niveau",
-  "creator": "John Doe",
-  "difficulty": 1,
+  "title": "Maîtrise",
+  "creator": "Mourad Akil",
+  "difficulty": 5,
   "blocks": [
     {
       "type": "A"
@@ -19,193 +19,7 @@
       "type": "A"
     },
     {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
       "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
     },
     {
       "type": "A"
@@ -253,13 +67,37 @@
       "type": "A"
     },
     {
-      "type": "A"
-    },
-    {
       "type": "B"
     },
     {
       "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
     },
     {
       "type": "A"
@@ -340,34 +178,7 @@
       "type": "A"
     },
     {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
       "type": "C"
-    },
-    {
-      "type": "A"
     },
     {
       "type": "A"
@@ -397,10 +208,49 @@
       "type": "A"
     },
     {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
       "type": "A"
     },
     {
       "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
     },
     {
       "type": "A"
@@ -434,6 +284,156 @@
     },
     {
       "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
     }
   ],
   "assets": {

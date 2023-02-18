@@ -1,7 +1,5 @@
-let points = 0
-let difficulty = 2
-
-function isPassed(difficulty) {
+function counter(difficulty) {
+  let points = 0
   setInterval(function () {
     let player = document.querySelector(".player-rpg");
     let playerLeft = parseInt(player.getBoundingClientRect().left);
@@ -32,7 +30,8 @@ function isPassed(difficulty) {
 
     points = pointsB + pointsC;
     console.log(points);
-  }, 100);
-} 
 
-isPassed(difficulty);
+    let score = document.querySelector(".score")
+    score.innerHTML = `Score: ${score}`;
+  }, 100);
+}

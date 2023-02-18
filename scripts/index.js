@@ -13,18 +13,10 @@ function readJSONBlocks(type, data, i) {
 }
 
 
-function loadEditJSON(levelURI) {
-  fetch(levelURI)
-    .then((param) => param.json())
-    .then((data) => {
-      let i = 0
-      while (i != (data.blocks).length) {
-        readJSONBlocks(data.blocks[i].type, data, i)
-        i++
-      }
-      // displayNumber()
-    })
-
+function loadEditJSON(data) {
+  let i = 0
+  while (i != (data.blocks).length) {
+    readJSONBlocks(data.blocks[i].type, data, i)
+    i++
+  }
 }
-
-loadEditJSON("./scripts/levels/example.jmpr")

@@ -292,7 +292,18 @@
         <script src="./scripts/addObstacles.js"></script>
         <script src="./scripts/revert-layer.js"></script>
         <script> 
+            function setJmprFile(levelURI) {
+                fetch(levelURI)
+                    .then((text) => text.json())
+                    .then((json) => {
+                        data = json
+                        loadEditJSONEditor(data)
+                    })
+            }
 
+            // Mettre le chemin relatif de votre fichier .jmpr
+            let levelURI = "./scripts/levels/leveledit.jmpr" 
+            setJmprFile(levelURI);
         </script>
     </body>
 </html>
