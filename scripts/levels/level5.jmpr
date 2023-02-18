@@ -1,7 +1,7 @@
 {
-  "title": "Nom du niveau",
-  "creator": "John Doe",
-  "difficulty": 1,
+  "title": "Maîtrise",
+  "creator": "Mourad Akil",
+  "difficulty": 5,
   "blocks": [
     {
       "type": "A"

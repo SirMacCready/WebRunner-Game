@@ -1,7 +1,7 @@
 {
-  "title": "Nom du niveau",
-  "creator": "John Doe",
-  "difficulty": 1,
+  "title": "Normal",
+  "creator": "Mourad Akil",
+  "difficulty": 2,
   "blocks": [
     {
       "type": "A"
