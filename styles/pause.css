@@ -31,17 +31,21 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 
 
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-image: url('../assets/background/pause.png');
     height: 100vh;
     background-size: cover;
     background-position: center;
 }
 
+
 ul{
     list-style: none;
     float: left;
     display: flex;
-    margin-left: 220px;
 }
 
 .titre h1{
@@ -49,21 +53,22 @@ ul{
     text-transform: uppercase;
     font-size: 173px;
     position: static;
-    margin-top: 286px;
-    margin-left: 385px;
     color: #fff;
 }
 
+.bouttons {
+    margin-top: 64px;
+    padding: 0;
+}
 .bouttons a{
     position: static;
     text-decoration: none;
     color: #000063;
     font-size: 45px;
     background-color: #fff;
-    margin-top: 20px;
     margin-left: 30px;
     padding: 23px 77px;
-    border-radius: 50px;
+    border-radius: 9999px;
 }
 
 .bouttons a:hover{

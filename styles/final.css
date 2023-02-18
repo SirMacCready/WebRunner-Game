@@ -64,7 +64,7 @@ ul {
 
 .titre h2 {
     font-size: 90px;
-    margin-bottom: 30px;
+    margin-bottom: 64px;
     color: #fff;
 }
 
@@ -73,11 +73,15 @@ ul {
     color: #000063;
     font-size: 45px;
     background-color: #fff;
-    margin-top: 200 px;
+
     margin-left: 30px;
     padding: 23px 77px;
     border-radius: 50px;
     font-family: "IBM-SemiBold";
+}
+
+.bouttons li:first-child a {
+    margin: 0;
 }
 
 .bouttons a:hover {
