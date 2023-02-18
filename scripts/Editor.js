@@ -234,38 +234,33 @@ function save(content, fileName) {
     a.click();
 }
 
-function loadEditJSON(levelURI) {
-    fetch(levelURI)
-        .then((param) => param.json())
-        .then((data) => {
-            let i = 0
-            while (i != (data.blocks).length) {
-                readJSONBlocks(data.blocks[i].type, data, i)
-                i++
-            }
+function loadEditJSONEditor(data) {
+    let i = 0
+    while (i != (data.blocks).length) {
+        readJSONBlocks(data.blocks[i].type, data, i)
+        i++
+    }
 
-            showHide();
+    showHide();
 
-            document.addEventListener('click', function (e) {
-                if (hasClass(e.target, 'container')) {
-                    addBlock(e, data, addMenu)
-                    editBlock(e, data, editMenu);
-                    delBlock(e, data, delMenu);
-                }
-            }, false);
+    document.addEventListener('click', function (e) {
+        if (hasClass(e.target, 'container')) {
+            addBlock(e, data, addMenu)
+            editBlock(e, data, editMenu);
+            delBlock(e, data, delMenu);
+        }
+    }, false);
 
-            function hasClass(elem, className) {
-                return elem.className.split(' ').indexOf(className) > -1;
-            }
+    function hasClass(elem, className) {
+        return elem.className.split(' ').indexOf(className) > -1;
+    }
 
-            document.querySelector(".download").addEventListener('click', () => {
-                title = prompt("Entrer le nom du fichier:")
-                let jsonData = JSON.stringify(data)
-                save(jsonData, title)
-            })
-        })
+    document.querySelector(".download").addEventListener('click', () => {
+        title = prompt("Entrer le nom du fichier:")
+        let jsonData = JSON.stringify(data)
+        save(jsonData, title)
+    })
 }
 
-loadEditJSON("./scripts/levels/levelx2.jmpr");
 // let number1 = numberOfBlocks("./scripts/levels/level1.jmpr");
 // console.log(number1)

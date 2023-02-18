@@ -1,8 +1,3 @@
-let points     = 0
-let difficulty = 1
-let passed     = false
-let gameOver   = false 
-
 let isAlive = setInterval(function () {
   let player = document.querySelector(".player-rpg");
   

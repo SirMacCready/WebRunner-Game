@@ -7,29 +7,6 @@
         <title>Runner WEB</title>
         <link rel="stylesheet" href="./styles/style.css">
         <link rel="stylesheet" href="./styles/Editor.css">
-        <style>
-             .foreground {
-                top: 24px;
-                animation: foreground 5s linear;
-            }
-
-            .game .zone .division .container {
-                animation: translation 5s linear;
-            }
-            
-            .game .floor {
-                animation: translation 5s linear;
-            }
-
-            @keyframes foreground {
-                0% {
-                    left: 0px;
-                }
-                100% {
-                    left: -504px;
-                }
-            }
-        </style>
     </head>
     <body>
         <div class="background">
@@ -41,7 +18,7 @@
             <img src="./assets/images/arbres.png" alt="Des arbres"
                 class="trees">
         </div>
-        <div>Score: 0</div>
+        <div class="score">Score: 0</div>
         <div class="game">
             <div class="zone">
                 <div class="player-rpg" id="player-rpg">
@@ -284,7 +261,7 @@
                 </div>
             </div>
         </div>
-        <!-- <script src="./scripts/audio.js"></script> -->
+        <script src="./scripts/slider.js"></script>
         <script src="./scripts/index.js"></script>
         <script src="./scripts/addObstacles.js"></script>
         <script src="./scripts/collisions.js"></script>
@@ -292,6 +269,33 @@
         <script src="./scripts/animation-runner.js"></script>
         <script src="./scripts/revert-layer.js"></script>
         <script src="./scripts/counter.js"></script>
-        <!-- <script src="./scripts/editSaveJSON.js"></script> -->
+        <script src="./scripts/difficulty.js"></script>
+        <script>
+            function setJmprFile(levelURI) {
+                fetch(levelURI)
+                    .then((text) => text.json())
+                    .then((json) => {
+                        data = json
+                        setDifficulty(data);
+                        return data;
+                    })
+                    .then((data) => {
+                        loadEditJSON(data)
+                        return data
+                    })
+                    .then((data) => {
+                        counter(data.difficulty);
+                        return data
+                    })
+                    .catch((error) => {
+                        console.error("Error in loading one of the files! Go and fix it!");
+                    })
+
+
+            // Mettre le chemin relatif de votre fichier .jmpr et
+            // le positionner au dessus de la fonction JmprFile.
+            setJmprFile(levelURI);
+            levelURI = "./scripts/levels/level3.jmpr" 
+        </script>
     </body>
 </html>
