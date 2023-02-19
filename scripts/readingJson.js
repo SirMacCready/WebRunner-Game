@@ -1,5 +1,5 @@
 function readJSON(data) {
-
+    //Permet d'écraser la source des images par ceux du JSON
     function overwriteChildren(class_, classType, child_, childType, type, data) {
         classType = document.querySelectorAll("." + class_).forEach((el) => {
             childType = document.createElement(type)
@@ -9,6 +9,7 @@ function readJSON(data) {
             childType.innerHTML = '<' + type + ' src=' + childType + 'alt="' + class_ + '"' + ' class ="' + child_ + '"'
         })
     }
+    //Ajoute un Child a un élément HTML
     function addChild(class_, classType, child_, childType, type, data, id) {
         classType = document.querySelector("." + class_)
         childType = document.createElement(type)
@@ -26,7 +27,7 @@ function readJSON(data) {
             classType.appendChild(childType)
         }
     }
-    console.log(data)
+    //Ecrasement des éléments 
     overwriteChildren("background", '', "sky", '', "img", data)
     overwriteChildren("foreground", '', "floor", '', "img", data)
     document.querySelector(".player-rpg").innerHTML = ''
