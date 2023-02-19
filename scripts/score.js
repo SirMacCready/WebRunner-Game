@@ -31,7 +31,8 @@ function counter(difficulty) {
     points = pointsB + pointsC;
     console.log(points);
 
-    let score = document.querySelector(".score")
-    score.innerHTML = `Score: ${score}`;
+    let score = document.querySelector(".score");
+    score.innerHTML = `Score: ${points}`;
+
   }, 100);
 }

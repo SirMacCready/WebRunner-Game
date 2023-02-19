@@ -1,21 +1,40 @@
 # RPG Web
 Un simple RPG codé en language web.
+Estimation du pourcentage de réussite vis-à-vis du livrable observé par l'équipe 64%.
+Cause: délais trop courts.
 
-## Cahier des charges
+## Ce que l'on a pu implémenter:
+- Les écrans:
+    - De démarrage
+    - De pause
+    - De fin
+    - Des paramètres (non fonctionnel)
+    - Des informations relatives au jeu
+- Les redirections entre ces différents écrans
+- Le niveau entier avec:
+    - L'affichage du score en temps réel
+    - L'affichage des obstacles
+    - La detection de collision
+    - L'animation du player et de l'obstacle up
+- L'éditeur entier avec:
+    - Ajout de block à droite de celui sélectionné
+    - Délétion de block
+    - Modification de block
+    - Téléchargement au format JSON sans bugs
+- La lecture des JSON, partie blocks
+- La cascade fetch en fin de fichier html
 
-Mourad, Céline, Fanta, Lydia
-- Background
-- Melody
-- Effet 
-- Images player rpg
-- Image block
 
-Arthur,  Eva:
-- Ecran de lancement
-- Ecran de pause
-- Ecran de fin de partie
+## Ce que l'on a pas pu implémenté:
+- L'audio
+- La modification des paramètres
+- La lecture des JSON partie assets
+- La selection du niveau dans l'écran principal (pas de back, so...)
+(Cf console fichier slider.js)
+- L'affichage du score final dans l'écran de fin (Cf console)
+(Cf console fichier index.html à la fin du niveau)
+- Les bonus
 
-Paul, Yohann, Eva:
-- JSON
-- Editeur
-- Design HTML des niveaux 
+## Bugs:
+- Lors de l'affichage de l'écran de pause, redémarage du niveau/éditeur.
+- La touche échap,  mais solutionné par l'ajout d'un boutton dans l'interface

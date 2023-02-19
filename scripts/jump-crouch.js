@@ -28,20 +28,17 @@ function jump(time) {
     jumper.style.display = "block"
     jump1.style.display = "block";
     jump2.style.display = "none";
-    jump3.style.display = "none";
     rpg.classList.add("jump");
     setTimeout(function () {
       runner.style.display = "none";
       jump1.style.display = "none";
       jump2.style.display = "block";
-      jump3.style.dispplay = "none";
 
     }, (time / 2))
     setTimeout(function () {
       runner.style.display = "block";
       jump1.style.display = "none";
       jump2.style.display = "none";
-      jump3.style.display = "none"
       rpg.classList.remove("jump");
     }, time)
   }

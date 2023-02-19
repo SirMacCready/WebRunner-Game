@@ -168,13 +168,13 @@
    }
 
    100% {
-     bottom: 120px;
+     bottom: 200px;
    }
  }
 
  @keyframes landing {
    0% {
-     bottom: 120px;
+     bottom: 200px;
 
    }
 
@@ -196,8 +196,8 @@
  }
 
  .background {
-  left: 0;
-  right: 0;
+   left: 0;
+   right: 0;
  }
 
  .foreground {
@@ -214,4 +214,29 @@
 
  .background img {
    width: 100%;
+ }
+
+.pause {
+  position: absolute;
+  top: 32px;
+  left: 40px;
+  background-color: #000063;
+  color: white;
+  font-size: 32px;
+  font-family: Video, monospace;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  user-select: none;
+}
+
+ .score,
+ .num {
+   position: absolute;
+   top: 32px;
+   right: 40px;
+   font-size: 32px;
+   font-family: Video, monospace;
+   color: white;
+   border: none;
+   user-select: none;
  }

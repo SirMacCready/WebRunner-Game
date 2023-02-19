@@ -83,29 +83,27 @@ function addBlock(a, data, addMenu) {
 
     addMenu.onclick = (bt) => {
         let btn = bt.target.parentElement
-        if (btn.id != "del") {
-            let newObject = { "type": btn.id.substr(btn.id.length - 1) }
-            let newDiv = document.createElement('div');
-            newDiv.classList = 'container ' + btn.id.substr(btn.id.length - 1);
-            newDiv.id = parseInt(a.target.id) + 1;
-            let containers = document.querySelectorAll(".container");
-            console.log(containers);
-            for (let i = parseInt(newDiv.id); i < containers.length; i++) {
-                containers[i].id = parseInt(containers[i].id) + 1;
-            }
-            let newBox = document.createElement('div');
-            newBox.className = "box1";
-            newDiv.appendChild(newBox);
-            let newBox2 = document.createElement('div');
-            newBox2.className = "box2";
-            newDiv.appendChild(newBox2);
-            a.target.after(newDiv)
-            data.blocks.splice(parseInt(newDiv.id), 0, newObject)
-            if (btn.id.substr(btn.id.length - 1) == "A"
-                || btn.id.substr(btn.id.length - 1) == "B"
-                || btn.id.substr(btn.id.length - 1) == "C") {
-                addObstacle(btn.id.substr(btn.id.length - 1), newDiv);
-            }
+        let newObject = { "type": btn.id.substr(btn.id.length - 1) }
+        let newDiv = document.createElement('div');
+        newDiv.classList = 'container ' + btn.id.substr(btn.id.length - 1);
+        newDiv.id = parseInt(a.target.id) + 1;
+        let containers = document.querySelectorAll(".container");
+        console.log(containers);
+        for (let i = parseInt(newDiv.id); i < containers.length; i++) {
+            containers[i].id = parseInt(containers[i].id) + 1;
+        }
+        let newBox = document.createElement('div');
+        newBox.className = "box1";
+        newDiv.appendChild(newBox);
+        let newBox2 = document.createElement('div');
+        newBox2.className = "box2";
+        newDiv.appendChild(newBox2);
+        a.target.after(newDiv)
+        data.blocks.splice(parseInt(newDiv.id), 0, newObject)
+        if (btn.id.substr(btn.id.length - 1) == "A"
+            || btn.id.substr(btn.id.length - 1) == "B"
+            || btn.id.substr(btn.id.length - 1) == "C") {
+            addObstacle(btn.id.substr(btn.id.length - 1), newDiv);
         }
         displayNumber(data)
     }

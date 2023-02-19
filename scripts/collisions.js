@@ -12,7 +12,7 @@ let isAlive = setInterval(function () {
     let obstacleDownLeft = parseInt(obstacleDown.getBoundingClientRect().left);
     let obstacleDownTop = parseInt(obstacleDown.getBoundingClientRect().top);
 
-    if (playerRight >= obstacleDownLeft && playerRight - 64 <= obstacleDownLeft && playerBottom >= obstacleDownTop) {
+    if (playerRight >= obstacleDownLeft + 15  && playerRight - 64 <= obstacleDownLeft && playerBottom >= obstacleDownTop) {
       window.location.href = "./screens/final.html"
     }
   })
@@ -23,7 +23,7 @@ let isAlive = setInterval(function () {
     let obstacleUpLeft = parseInt(obstacleUp.getBoundingClientRect().left);
     let obstacleUpBottom = parseInt(obstacleUp.getBoundingClientRect().bottom);
 
-    if (playerRight >= obstacleUpLeft && playerRight - 64 <= obstacleUpLeft && playerTop <= obstacleUpBottom) {
+    if (playerRight >= obstacleUpLeft + 15 && playerRight - 64 <= obstacleUpLeft && playerTop <= obstacleUpBottom) {
       window.location.href = "./screens/final.html"
     }
   })

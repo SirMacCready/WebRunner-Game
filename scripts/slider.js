@@ -4,12 +4,18 @@ const left = document.querySelector("#precedent");
 const right = document.querySelector("#suivant");
 
 let level1 = "Découverte";
-// let levelURI = "./scripts/levels/level1.jmpr";
+let levelURI = "./scripts/levels/level1.jmpr";
 let i = 0;
 
 
 button.addEventListener("click", function () {
+
+    // À commenter
     window.location.href = "../index.html";
+
+    // À décommenter
+    // console.log(levelURI)
+
 }, { once: true });
 
 function ChangeLevel(sens) {
@@ -47,8 +53,15 @@ function select() {
     }
 
     button.onclick = () => {
+
+        // À commenter
         window.location.href = "../index.html";
+
+        // À décommenter
+        // console.log(levelURI)
+
     }
 }
 
+// Parcequ'on a pas de back, on ne peut pas exporter et importer les variables
 // export { levelURI }
