@@ -1,313 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Runner WEB</title>
-        <link rel="stylesheet" href="./styles/style.css">
-        <link rel="stylesheet" href="./styles/Editor.css">
-        
         <link rel="stylesheet" href="https://use.typekit.net/yga1zcx.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="../styles/index.css">
+
+        <title>Forest Run</title>
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
     </head>
     <body>
-        <div class="background">
-            <img src="./assets/images/ciel.png" alt="" class="sky">
-        </div>
-        <div class="foreground">
-            <img src="./assets/images/arbres.png" alt="Des arbres"
-                class="trees">
-            <img src="./assets/images/arbres.png" alt="Des arbres"
-                class="trees">
-        </div>
-        <a href="./screens/pause.html"><p class="pause">Pause</p></a>
-        <div class="score">Score: 0</div>
-        <div class="game">
-            <div class="zone">
-                <div class="player-rpg" id="player-rpg">
-                    <img src="./assets/images/runner/runner_sat.png" alt="Crouch
-                        runner."
-                        class="croucher" style="display: none;">
-                     <div class="jumper">
-                        <img src="./assets/images/runner/runner_jump1.png"
-                            alt="Jumping
-                            runner." class="jump1" style="display: none;">
-                        <img src="./assets/images/runner/runner_jump2.png"
-                            alt="Bouncing
-                            runner." class="jump2" style="display: none;">
-                        <img src="./assets/images/runner/runner_jump3.png"
-                            alt="Landing
-                            runner." class="jump3" style="display: none;">
-                    </div>
-                    <div class="runner" id="runner">
-                    </div>
-                </div>
-                <section class="division">
-                </section>
+        <header>
+            <div class="nav">
+                <p><a href="./screens/parametres.html">Paramètres</a></p>
+                <p><a href="./screens/informations.html"> Informations</a></p>
+                <p><a href="./editor.html">Editer</a></p>
             </div>
-            <div class="floor">
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
+            <div class="score">
+            </div>
+        </header>
+        <div class="center">
+            <div class="titre">
+                <h1>Forest Run</h1>
+            </div>
+            <div class="niveau">
+                <div class="skip" id="precedent">
+                    <img src="./assets/images/icon_left-arrow-white.png"
+                        alt="La flèche gauche.">
                 </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
+                <div id="liste-niveau">Découverte</div>
+                <div class="skip" id="suivant">
+                    <img src="./assets/images/icon_right-arrow-white.png"
+                        alt="La flèche droite.">
                 </div>
             </div>
-        </div>
-        <script src="./scripts/difficulty.js"></script>
-        <script src="./scripts/index.js"></script>
-        <script src="./scripts/addObstacles.js"></script>
-        <script src="./scripts/collisions.js"></script>
-        <script src="./scripts/jump-crouch.js"></script>
-        <script src="./scripts/animation-runner.js"></script>
-        <script src="./scripts/revert-layer.js"></script>
-        <script src="./scripts/score.js"></script>
-        <script src="./scripts/readingJson.js"></script> 
-        <script src="./scripts/escape.js"></script>
-        <script src="./scripts/win.js"></script>
-        <script>
-            // Malheureusement, ne peut se faire car manque de back-end...
-            // import { levelURI } from './scripts/slider.js';
 
-            function setJmprFile(levelURI) {
-                fetch(levelURI)
-                    .then((text) => text.json())
-                    .then((json) => {
-                        data = json
-                        setDifficulty(data);
-                        return data;
-                    })
-                    // .then((data) => {
-                    //     readJSON(data);
-                    //     return data
-                    // })
-                    .then((data) => {
-                        loadEditJSON(data);
-                        return data;
-                    })
-                    .then((data) => {
-                        counter(data.difficulty);
-                        return data;
-                    })
-                    .catch((error) => {
-                        console.error("Error in loading one of the files! Go and fix it!");
-                    })
+            <div class="boutton">
+                <a>Play</a>
+            </div>
+        </div>
+        <audio class="audioButton" src="/assets/audio/jump.mp3"></audio>
+        <script src="./scripts/slider.js"></script>
+        <!-- <script>
+                const audio = document.querySelector(".audioButton");
+                const boutton1 = document.querySelector(".boutton");
+
+                boutton1.onclick = function () {
+                    audio.play()
                 }
-
-            // Mettre le chemin relatif de votre fichier .jmpr
-            // À noter que les notres ont entièrement été faits avec l'éditeur
-            levelURI = "./scripts/levels/level2.jmpr"
-            setJmprFile(levelURI);
-        </script>
+            </script> -->
     </body>
 </html>

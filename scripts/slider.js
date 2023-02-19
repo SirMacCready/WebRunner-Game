@@ -11,7 +11,7 @@ let i = 0;
 button.addEventListener("click", function () {
 
     // À commenter
-    window.location.href = "../index.html";
+    window.location.href = "../main.html";
 
     // À décommenter
     // console.log(levelURI)
@@ -55,7 +55,7 @@ function select() {
     button.onclick = () => {
 
         // À commenter
-        window.location.href = "../index.html";
+        window.location.href = "../main.html";
 
         // À décommenter
         // console.log(levelURI)
