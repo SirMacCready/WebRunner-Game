@@ -1,7 +1,15 @@
 const levelButton = ["Découverte", "Normal", "Perfectionnement", "Expertise", "Maîtrise"];
-let i = 0;
-let levelX = "Découverte";
+const button = document.querySelector(".boutton");
+
+let level1 = "Découverte";
 let levelURI = "./scripts/levels/level1.jmpr";
+let i = 0;
+
+button.addEventListener("click", function () {
+    window.location.href = "../index.html";
+}, { once: true });
+
+button.onclick = null;
 
 function ChangeLevel(sens) {
     i = i + sens;
@@ -12,32 +20,24 @@ function ChangeLevel(sens) {
         i = levelButton.length - 1;
     }
     document.getElementById("liste-niveau").textContent = levelButton[i];
-    levelX = levelButton[i];
-
+    level1 = levelButton[i];
+    select();
 }
 
-function select(level1) {
-    const button = document.querySelector(".boutton");
-
-    if (level1 == "Découverte") {
+function select() {
+    if (level1 === "Découverte") {
         levelURI = "./scripts/levels/level1.jmpr"
-    } else if (level1 == "Normal") {
+    } else if (level1 === "Normal") {
         levelURI = "./scripts/levels/level2.jmpr"
-    } else if (level1 == "Perfectionnement") {
+    } else if (level1 === "Perfectionnement") {
         levelURI = "./scripts/levels/level3.jmpr"
-    } else if (level1 == "Expertise") {
+    } else if (level1 === "Expertise") {
         levelURI = "./scripts/levels/level4.jmpr"
-    } else if (level1 == "Maîtrise") {
+    } else if (level1 === "Maîtrise") {
         levelURI = "./scripts/levels/level5.jmpr"
     }
 
-    button.onclick = () => { window.location.href = "../index.html" }
-    // 
+    button.onclick = () => {
+        window.location.href = "../index.html";
+    }
 }
-    // return levelURI
-    // console.log(levelURI)
-
-
-console.log(select(levelX))
-select(levelX);
-// console.log(select())

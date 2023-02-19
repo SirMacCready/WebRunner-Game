@@ -1,7 +1,7 @@
 {
-  "title": "Découverte",
+  "title": "Expert",
   "creator": "Mafanta Jetei Jetei",
-  "difficulty": 1,
+  "difficulty": 4,
   "blocks": [
     {
       "type": "A"
@@ -13,7 +13,13 @@
       "type": "A"
     },
     {
+      "type": "B"
+    },
+    {
       "type": "A"
+    },
+    {
+      "type": "B"
     },
     {
       "type": "A"
@@ -22,13 +28,13 @@
       "type": "A"
     },
     {
-      "type": "A"
+      "type": "C"
     },
     {
       "type": "A"
     },
     {
-      "type": "A"
+      "type": "B"
     },
     {
       "type": "A"
@@ -47,216 +53,6 @@
     },
     {
       "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
     },
     {
       "type": "A"
@@ -301,7 +97,7 @@
       "type": "A"
     },
     {
-      "type": "C"
+      "type": "B"
     },
     {
       "type": "A"
@@ -325,19 +121,7 @@
       "type": "A"
     },
     {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
+      "type": "B"
     },
     {
       "type": "A"
@@ -361,6 +145,12 @@
       "type": "A"
     },
     {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
       "type": "A"
     },
     {
@@ -368,6 +158,216 @@
     },
     {
       "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
     },
     {
       "type": "A"
@@ -418,7 +418,7 @@
       "type": "A"
     },
     {
-      "type": "A"
+      "type": "B"
     },
     {
       "type": "A"
@@ -427,7 +427,7 @@
       "type": "A"
     },
     {
-      "type": "A"
+      "type": "B"
     },
     {
       "type": "A"
