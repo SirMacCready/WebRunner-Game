@@ -4,7 +4,7 @@ let ending = setInterval(function () {
   console.log(rightEnd)
   if (rightEnd <= 1500) {
     // À décommenter
-    console.log(points)
+    // console.log(points)
 
     // À commenter
     window.location.href = "./screens/win.html"

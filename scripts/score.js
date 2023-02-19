@@ -1,6 +1,6 @@
 let points = 0
 function counter(difficulty) {
-  setInterval(function () {
+  let scoreParty = setInterval(function () {
     let player = document.querySelector(".player-rpg");
     let playerLeft = parseInt(player.getBoundingClientRect().left);
 
@@ -11,6 +11,7 @@ function counter(difficulty) {
     let containerLeftCount = 0;
     let pointsB = 0;
     let pointsC = 0;
+
     for (let container of containersB) {
       let containerRight = parseInt(container.getBoundingClientRect().right)
 
@@ -33,6 +34,13 @@ function counter(difficulty) {
     let score = document.querySelector(".score");
     score.innerHTML = `Score: ${points}`;
 
+    const end = document.querySelector(".division").lastChild;
+    const rightEnd = end.getBoundingClientRect().right;
+    console.log(rightEnd)
+
+    if (rightEnd <= 1500) {
+      clearTimeout(scoreParty);
+    }
     // À décommenter
     // console.log(points);
   }, 100);
