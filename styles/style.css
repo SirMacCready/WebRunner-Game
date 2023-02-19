@@ -216,18 +216,18 @@
    width: 100%;
  }
 
-.pause {
-  position: absolute;
-  top: 32px;
-  left: 40px;
-  background-color: #000063;
-  color: white;
-  font-size: 32px;
-  font-family: Video, monospace;
-  padding: 8px 16px;
-  border-radius: 9999px;
-  user-select: none;
-}
+ .pause {
+   position: absolute;
+   top: 32px;
+   left: 40px;
+   background-color: #000063;
+   color: white;
+   font-size: 32px;
+   font-family: Video, monospace;
+   padding: 8px 16px;
+   border-radius: 9999px;
+   user-select: none;
+ }
 
  .score,
  .num {

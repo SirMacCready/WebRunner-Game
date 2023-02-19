@@ -1,13 +1,3 @@
-@import url("https://p.typekit.net/p.css?s=1&k=yga1zcx&ht=tk&f=43349.43352.43354.43357&a=133775997&app=typekit&e=css");
-
-.tk-video {
-    font-family: "video", serif;
-}
-
-.tk-video-cond {
-    font-family: "video-cond", serif;
-}
-
 * {
     margin: 0;
     text-transform: uppercase;
@@ -44,7 +34,8 @@ header {
 .nav {
     display: flex;
     align-items: center;
-    font-family: 'IBM Plex Sans', sans-serif;;
+    font-family: 'IBM Plex Sans', sans-serif;
+    ;
     font-weight: medium;
 }
 

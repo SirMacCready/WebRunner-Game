@@ -4,15 +4,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <link rel="stylesheet" href="./styles/style.css">
         <link rel="stylesheet" href="./styles/Editor.css">
-        
-        <link rel="stylesheet" href="https://use.typekit.net/yga1zcx.css">
-        
-        <title>Runner WEB</title>
-        <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
 
+        <link rel="stylesheet" href="https://use.typekit.net/yga1zcx.css">
+        <title>Forest Run - Play</title>
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
     </head>
     <body>
         <div class="background">
@@ -26,13 +23,13 @@
         </div>
         <a href="./screens/pause.html"><p class="pause">Pause</p></a>
         <div class="score">Score: 0</div>
-        <div class="game">
+        <section class="game">
             <div class="zone">
                 <div class="player-rpg" id="player-rpg">
                     <img src="./assets/images/runner/runner_sat.png" alt="Crouch
                         runner."
                         class="croucher" style="display: none;">
-                     <div class="jumper">
+                    <div class="jumper">
                         <img src="./assets/images/runner/runner_jump1.png"
                             alt="Jumping
                             runner." class="jump1" style="display: none;">
@@ -52,222 +49,321 @@
             <div class="floor">
                 <div class="floor1">
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                 </div>
                 <div class="floor1">
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                 </div>
                 <div class="floor1">
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                 </div>
                 <div class="floor1">
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                 </div>
                 <div class="floor1">
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                </div>
-                <div class="floor1">
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                    </div>
-                    <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                 </div>
                 <div class="floor1">
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                 </div>
                 <div class="floor1">
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                     <div class="floor2">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
-                        <img src="./assets/images/floor.png" alt="Le sol" class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                </div>
+                <div class="floor1">
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                </div>
+                <div class="floor1">
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                </div>
+                <div class="floor1">
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                </div>
+                <div class="floor1">
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                </div>
+                <div class="floor1">
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                    </div>
+                    <div class="floor2">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
+                        <img src="./assets/images/floor.png" alt="Le sol"
+                            class="floor3">
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <audio autoplay loop>
+            <source src="./assets/audio/music.mp3" type="audio/ogg">
+        </audio>
         <script src="./scripts/difficulty.js"></script>
         <script src="./scripts/index.js"></script>
         <script src="./scripts/addObstacles.js"></script>
@@ -276,7 +372,7 @@
         <script src="./scripts/animation-runner.js"></script>
         <script src="./scripts/revert-layer.js"></script>
         <script src="./scripts/score.js"></script>
-        <script src="./scripts/readingJson.js"></script> 
+        <script src="./scripts/readingJson.js"></script>
         <script src="./scripts/escape.js"></script>
         <script src="./scripts/win.js"></script>
         <script>
