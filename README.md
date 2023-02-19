@@ -29,7 +29,7 @@ Cause: délais trop courts.
 - L'audio
 - La lecture des JSON partie assets
 - La selection du niveau dans l'écran principal (pas de back, so...) (Cf console fichier slider.js)
-- L'affichage du score final dans l'écran de fin (Cf fichier win.html à la fin du niveau)
+- L'affichage du score final dans l'écran de fin (Cf fichier fin de fichier gameover.html et win.html, et de win.js lorsque le niveau se finit)
 - La modification des paramètres
 
 ## Bugs:
