@@ -1,5 +1,5 @@
 {
-  "title": "Décourv",
+  "title": "Découverte",
   "creator": "Mafanta Jetei Jetei",
   "difficulty": 1,
   "blocks": [
@@ -437,11 +437,14 @@
     }
   ],
   "assets": {
-    "background": "../../assets/images/floor.png",
+    "background": "../../assets/images/ciel.png",
     "middleground": "../../assets/images/arbres.png",
-    "foreground": "../../assets/images/ciel.png",
+    "foreground": "../../assets/images/floor.png",
     "upObstacle": "../../assets/images/bird.js",
     "downObstacle": "../../assets/images/mushrooms.js",
-    "melody": "../../assets/audio/?"
+    "runner": "../../assets/images/runner/runner_cours1.png",
+    "croucher": "../../assets/images/runner/runner_sat.png",
+    "jump1": "../../assets/images/runner/runner_jump1.png",
+    "jump2": "../../assets/images/runner/runner_jump2.png"
   }
 }

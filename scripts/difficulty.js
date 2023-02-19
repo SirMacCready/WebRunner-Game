@@ -40,7 +40,6 @@ function difficulty1(speed) {
   style.innerHTML = foreground;
   style.innerHTML += game;
 
-  console.log(style);
   document.getElementsByTagName('head')[0].appendChild(style);
 }
 

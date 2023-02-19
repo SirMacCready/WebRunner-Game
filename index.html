@@ -271,7 +271,7 @@
         <script src="./scripts/counter.js"></script>
         <script src="./scripts/readingJson.js"></script> 
         <script>
-            // Malheureusement ne peut se faire car manque de back
+            // Malheureusement ne peut se faire car manque de back...
             // import { levelURI } from './scripts/slider.js';
 
             function setJmprFile(levelURI) {
@@ -282,9 +282,10 @@
                         setDifficulty(data);
                         return data;
                     })
-                    .then((data) => {
-                        readJSON(data);
-                    })
+                    // .then((data) => {
+                    //     readJSON(data);
+                    //     return data
+                    // })
                     .then((data) => {
                         loadEditJSON(data)
                         return data
@@ -299,6 +300,7 @@
                 }
 
             // Mettre le chemin relatif de votre fichier .jmpr
+            // À noter que les notres ont entièrement été faits avec l'éditeur
             levelURI = "./scripts/levels/level3.jmpr"
             setJmprFile(levelURI);
         </script>
