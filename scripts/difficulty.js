@@ -3,7 +3,7 @@ function difficulty1(speed) {
   let style = document.createElement('style');
   style.type = 'text/css';
 
-  let foreground = `\
+  let foreground = `
 .foreground {
   top: 24px;
   animation: foreground 60s linear;

@@ -7,70 +7,61 @@ font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
 }
 
 @font-face {
+    font-family: 'IBM-Light';
+    src: url('./font/IBMPlexMono-ExtraLightItalic.ttf');
+   }
+
+
+@font-face {
     font-family: 'IBM-SemiBold';
     src: url('./font/IBMPlexMono-SemiBold.ttf');
 }
 
+@font-face {
+    font-family: 'IBM-Medium';
+    src: url('./font/IBMPlexMono-Medium.ttf');
+}
 
 .tk-video { font-family: "video",serif; }
+.tk-video-cond { font-family: "video-cond",serif; }
 
 
 *{
     margin: 40;
     color: #fff;
-    font-family: "IBM-SemiBold";
-    font-size: 45px;
+    font-family: "IBM-Medium";
+    font-size: 30px;
 }
 
 h1{
     font-family: "video";
     font-size: 90px;
     text-transform: uppercase;
-
+    text-align: center;
 }
-
 body{
-    background-image: url(./background/home.png);
+    background-image: url("../assets/background/home.png");
     height: 100vh;
     background-size: cover;
     background-position: center;
 }
 .main{
-    text-align: center;
-
-}
-
-.son{
-    display: flex;
-    justify-content: center;
-
-}
-
-.pause{
-    margin-bottom: 100px;
-}
-
-.commande{
-    margin-bottom: 100px;
+    margin-left: 100px;
 }
 .boutton a{
-    position: relative;
+    position: static;
     text-decoration: none;
     color: #000063;
     font-family: "IBM-SemiBold";
     font-size: 45px;
     background-color: #fff;
+    margin-left: 700px;
     justify-content: center;
     padding: 23px 77px;
     border-radius: 50px;
 }
 
-
 .boutton a:hover{
     background-color:#000063;
     color: #fff;
-}
-
-input{
-    color: #000063;
 }

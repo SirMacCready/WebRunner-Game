@@ -1,7 +1,5 @@
-function loadEditJSON() {
-    fetch("./scripts/levels/leve2 copy.jmpr")
-    .then((param) =>  param.json() )
-    .then((data) => { 
+function readJSON(data) {
+
         function overwriteChildren(class_,classType,child_,childType,type,data) {
             classType = document.querySelectorAll("."+class_).forEach((el) => {
                 childType = document.createElement(type)
@@ -38,7 +36,5 @@ function loadEditJSON() {
         addChild("jumper",'',"jump3",'',"img",data,'')
         addChild("jumper",'',"runner",'',"div",data,'runner')
         overwriteChildren("floor2",'',"floor3",'',"img",data)
-    }
-    )
+
 }
-loadEditJSON()

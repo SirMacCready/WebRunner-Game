@@ -1,15 +1,16 @@
 const levelButton = ["Découverte", "Normal", "Perfectionnement", "Expertise", "Maîtrise"];
 const button = document.querySelector(".boutton");
+const left = document.querySelector("#precedent");
+const right = document.querySelector("#suivant");
 
 let level1 = "Découverte";
-let levelURI = "./scripts/levels/level1.jmpr";
+// let levelURI = "./scripts/levels/level1.jmpr";
 let i = 0;
+
 
 button.addEventListener("click", function () {
     window.location.href = "../index.html";
 }, { once: true });
-
-button.onclick = null;
 
 function ChangeLevel(sens) {
     i = i + sens;
@@ -22,6 +23,14 @@ function ChangeLevel(sens) {
     document.getElementById("liste-niveau").textContent = levelButton[i];
     level1 = levelButton[i];
     select();
+}
+
+left.onclick = function () {
+    ChangeLevel(-1);
+};
+
+right.onclick = function () {
+    ChangeLevel(1);
 }
 
 function select() {
@@ -41,3 +50,5 @@ function select() {
         window.location.href = "../index.html";
     }
 }
+
+// export { levelURI }
