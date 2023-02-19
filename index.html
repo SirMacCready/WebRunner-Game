@@ -274,8 +274,9 @@
         <script src="./scripts/score.js"></script>
         <script src="./scripts/readingJson.js"></script> 
         <script src="./scripts/escape.js"></script>
+        <script src="./scripts/win.js"></script>
         <script>
-            // Malheureusement ne peut se faire car manque de back...
+            // Malheureusement, ne peut se faire car manque de back-end...
             // import { levelURI } from './scripts/slider.js';
 
             function setJmprFile(levelURI) {
@@ -291,12 +292,12 @@
                     //     return data
                     // })
                     .then((data) => {
-                        loadEditJSON(data)
-                        return data
+                        loadEditJSON(data);
+                        return data;
                     })
                     .then((data) => {
                         counter(data.difficulty);
-                        return data
+                        return data;
                     })
                     .catch((error) => {
                         console.error("Error in loading one of the files! Go and fix it!");
@@ -305,7 +306,7 @@
 
             // Mettre le chemin relatif de votre fichier .jmpr
             // À noter que les notres ont entièrement été faits avec l'éditeur
-            levelURI = "./scripts/levels/level3.jmpr"
+            levelURI = "./scripts/levels/level2.jmpr"
             setJmprFile(levelURI);
         </script>
     </body>

@@ -1,5 +1,5 @@
+let points = 0
 function counter(difficulty) {
-  let points = 0
   setInterval(function () {
     let player = document.querySelector(".player-rpg");
     let playerLeft = parseInt(player.getBoundingClientRect().left);
@@ -34,5 +34,9 @@ function counter(difficulty) {
     let score = document.querySelector(".score");
     score.innerHTML = `Score: ${points}`;
 
+    // À décommenter
+    // console.log(points);
   }, 100);
 }
+
+// export { points }

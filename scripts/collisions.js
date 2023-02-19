@@ -13,7 +13,7 @@ let isAlive = setInterval(function () {
     let obstacleDownTop = parseInt(obstacleDown.getBoundingClientRect().top);
 
     if (playerRight >= obstacleDownLeft + 15  && playerRight - 64 <= obstacleDownLeft && playerBottom >= obstacleDownTop) {
-      window.location.href = "./screens/final.html"
+      window.location.href = "./screens/gameover.html"
     }
   })
 
@@ -24,7 +24,7 @@ let isAlive = setInterval(function () {
     let obstacleUpBottom = parseInt(obstacleUp.getBoundingClientRect().bottom);
 
     if (playerRight >= obstacleUpLeft + 15 && playerRight - 64 <= obstacleUpLeft && playerTop <= obstacleUpBottom) {
-      window.location.href = "./screens/final.html"
+      window.location.href = "./screens/gameover.html"
     }
   })
 }, 100);

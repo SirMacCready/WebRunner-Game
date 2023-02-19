@@ -22,18 +22,15 @@ Cause: délais trop courts.
     - Modification de block
     - Téléchargement au format JSON sans bugs
 - La lecture des JSON, partie blocks
-- La cascade fetch en fin de fichier html
+- La cascade fetch en fin de fichier index.html et editor.html
 
 
-## Ce que l'on a pas pu implémenté:
+## Ce que l'on a pas pu implémenté (du plus important au moins important):
 - L'audio
-- La modification des paramètres
 - La lecture des JSON partie assets
-- La selection du niveau dans l'écran principal (pas de back, so...)
-(Cf console fichier slider.js)
-- L'affichage du score final dans l'écran de fin (Cf console)
-(Cf console fichier index.html à la fin du niveau)
-- Les bonus
+- La selection du niveau dans l'écran principal (pas de back, so...) (Cf console fichier slider.js)
+- L'affichage du score final dans l'écran de fin (Cf fichier win.html à la fin du niveau)
+- La modification des paramètres
 
 ## Bugs:
 - Lors de l'affichage de l'écran de pause, redémarage du niveau/éditeur.
