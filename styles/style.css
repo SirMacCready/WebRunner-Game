@@ -138,7 +138,7 @@
  }
 
  .game .floor .floor2 img {
-   width: 50vw;
+   width: 720px;
    object-fit: contain;
    object-position: center;
  }
@@ -209,7 +209,7 @@
 
    object-fit: cover;
    object-position: center;
-   width: 120%;
+   width: 1440;
  }
 
  .background img {
