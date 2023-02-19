@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    user-select: none;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../assets/background/pause.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+ul {
+    list-style: none;
+    float: left;
+    display: flex;
+}
+
+.titre h1 {
+    font-family: "Video";
+    text-transform: uppercase;
+    font-size: 173px;
+    position: static;
+    color: #fff;
+}
+
+.bouttons {
+    margin-top: 64px;
+    padding: 0;
+}
+
+.bouttons a {
+    position: static;
+    text-decoration: none;
+    color: #000063;
+    font-size: 45px;
+    background-color: #fff;
+    margin-left: 30px;
+    padding: 23px 77px;
+    border-radius: 9999px;
+}
+
+.bouttons a:hover {
+    background-color: #000063;
+    color: #fff;
+    border: 1px solid #000063;
+}
+
+#Quit {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+#Quit:hover {
+    border: 1px solid #000063;
+    color: #000063;
+}

@@ -1,6 +1,6 @@
 {
-  "title": "Normal",
-  "creator": "Mourad Akil",
+  "title": "Expert",
+  "creator": "Mafanta Jetei Jetei",
   "difficulty": 2,
   "blocks": [
     {
@@ -28,10 +28,151 @@
       "type": "A"
     },
     {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
       "type": "A"
     },
     {
       "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "C"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
     },
     {
       "type": "A"
@@ -94,31 +235,10 @@
       "type": "A"
     },
     {
-      "type": "A"
-    },
-    {
       "type": "B"
     },
     {
       "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
     },
     {
       "type": "A"
@@ -143,153 +263,6 @@
     },
     {
       "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "C"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "A"
-    },
-    {
-      "type": "B"
     },
     {
       "type": "A"
@@ -364,7 +337,40 @@
       "type": "A"
     },
     {
+      "type": "A"
+    },
+    {
+      "type": "B"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
+      "type": "A"
+    },
+    {
       "type": "C"
+    },
+    {
+      "type": "A"
     },
     {
       "type": "A"
@@ -400,9 +406,6 @@
       "type": "A"
     },
     {
-      "type": "C"
-    },
-    {
       "type": "A"
     },
     {
@@ -415,9 +418,6 @@
       "type": "A"
     },
     {
-      "type": "C"
-    },
-    {
       "type": "A"
     },
     {
@@ -427,7 +427,7 @@
       "type": "A"
     },
     {
-      "type": "B"
+      "type": "A"
     },
     {
       "type": "A"

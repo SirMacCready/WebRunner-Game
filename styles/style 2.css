@@ -1,0 +1,242 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ body,
+ html {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   /* align-items: flex-end; */
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+ }
+
+ .game {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   position: relative;
+   top: 232px;
+   /* margin-top: 240px; */
+   width: 100%;
+   height: 100%;
+
+
+ }
+
+ .game .zone {
+   display: flex;
+   position: relative;
+   width: 100%;
+   height: 240px;
+   bottom: 0;
+ }
+
+ .game .zone .player-rpg {
+   display: flex;
+   align-items: flex-end;
+   position: absolute;
+   /* background-color: aliceblue; */
+   bottom: 0;
+   left: 240px;
+ }
+
+ .game .zone .player-rpg img {
+   position: relative;
+   height: 120px;
+   /* z-index: 999; */
+ }
+
+ .game .zone .player-rpg .runner img {
+   display: none;
+ }
+
+ .game .zone .player-rpg .runner img:first-child {
+   display: block;
+ }
+
+ .game .zone .player-rpg.jump {
+   animation: jump 0.75s ease-out, 0.75s landing .75s ease-in;
+ }
+
+ .game .zone .player-rpg.crouch {
+   width: 120px !important;
+   height: 65px !important;
+ }
+
+ .game .zone .player-rpg .croucher {
+   width: 105px;
+   height: 105px;
+ }
+
+ .game .zone .division {
+   position: relative;
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   width: auto;
+   height: 240px;
+   /* overflow: scroll; */
+ }
+
+ .game .zone .division .container {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   bottom: 0;
+   height: 240px;
+   width: 120px;
+   display: flex;
+   align-items: center;
+   transition: 0.5s;
+ }
+
+
+ .game .zone .division .container>div {
+   display: flex;
+   position: relative;
+   justify-content: center;
+   width: 120px;
+   height: 120px;
+   border: none;
+   border-radius: 8px;
+   z-index: -1;
+ }
+
+ .game .zone .division .container div.box1 {
+   position: relative;
+   top: 24px;
+
+ }
+
+ .game .zone .division .container div.box2 {
+   position: relative;
+   bottom: -8px;
+ }
+
+ .game .floor {
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   width: auto;
+   height: auto;
+ }
+
+ .game .floor .floor2 {
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   z-index: revert-layer;
+   margin: -6px 0 -88px 0;
+   width: 100%;
+   overflow: hidden;
+ }
+
+ .game .floor .floor2 img {
+   width: 720px;
+   object-fit: contain;
+   object-position: center;
+ }
+
+ .image {
+   position: relative;
+   bottom: 0;
+   height: 120px;
+ }
+
+ .obstacle {
+   position: absolute;
+ }
+
+ .num {
+   position: absolute;
+   top: 80px;
+   right: 80px;
+   color: black;
+   border: 1px solid black;
+   padding: 4px;
+ }
+
+ @keyframes jump {
+   0% {
+     bottom: 0;
+   }
+
+   100% {
+     bottom: 200px;
+   }
+ }
+
+ @keyframes landing {
+   0% {
+     bottom: 200px;
+
+   }
+
+   100% {
+     bottom: 0px;
+   }
+ }
+
+
+ .background,
+ .foreground {
+   display: flex;
+   flex-direction: row;
+   position: absolute;
+   top: 0;
+   height: 75%;
+   /* width: auto; */
+   z-index: -1;
+ }
+
+ .background {
+   left: 0;
+   right: 0;
+ }
+
+ .foreground {
+   top: 24px;
+ }
+
+ .background img,
+ .foreground img {
+
+   object-fit: cover;
+   object-position: center;
+   width: 1440;
+ }
+
+ .background img {
+   width: 100%;
+ }
+
+ .pause {
+   position: absolute;
+   top: 32px;
+   left: 40px;
+   background-color: #000063;
+   color: white;
+   font-size: 32px;
+   font-family: Video, monospace;
+   padding: 8px 16px;
+   border-radius: 9999px;
+   user-select: none;
+ }
+
+ .score,
+ .num {
+   position: absolute;
+   top: 32px;
+   right: 40px;
+   font-size: 32px;
+   font-family: Video, monospace;
+   color: white;
+   border: none;
+   user-select: none;
+ }

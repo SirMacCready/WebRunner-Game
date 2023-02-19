@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    text-transform: uppercase;
+    color: #fff;
+    user-select: none;
+}
+
+
+body {
+    background-image: url('../assets/background/home.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+    border: 0.5px solid #fff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    ;
+    font-weight: medium;
+}
+
+.nav p {
+    font-family: inherit;
+    margin-left: 32px;
+    padding: 10px 10px;
+}
+
+a {
+    font-family: Video, monospace;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titre h1 {
+    font-size: 173px;
+    position: relative;
+    font-family: "video", serif;
+    text-align: center;
+}
+
+.niveau {
+    font-size: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.niveau .skip img {
+    width: 56px;
+}
+
+.niveau #precedent,
+.niveau #suivant {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 102px;
+    height: 102px;
+    border-radius: 9999px;
+    margin: 25px;
+    background-color: transparent;
+    border: 1px solid #fff;
+
+}
+
+
+
+.niveau a:hover {
+    color: #000063;
+    border: 1px solid #000063;
+    transform: translate(0px, -6px);
+}
+
+
+#liste-niveau {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    border: transparent;
+    background-color: transparent;
+}
+
+
+.score {
+    font-family: "Video";
+    float: right;
+    margin-right: 32px;
+}
+
+.boutton {
+    margin-top: 64px;
+}
+
+.boutton a {
+    position: relative;
+    text-decoration: none;
+    color: #000063;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    background-color: #fff;
+    padding: 23px 77px;
+    border-radius: 50px;
+}
+
+.boutton a:hover {
+    background-color: #000063;
+    color: #fff;
+}

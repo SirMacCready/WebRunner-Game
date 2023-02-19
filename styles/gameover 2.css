@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    user-select: none;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../assets/background/gameover.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    float: left;
+    display: flex;
+    margin-top: 32px;
+}
+
+.titre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Video";
+    text-transform: uppercase;
+}
+
+.titre h1 {
+    font-size: 173px;
+    position: static;
+    color: #fff;
+}
+
+.titre h2 {
+    font-size: 90px;
+    margin-bottom: 64px;
+    color: #fff;
+}
+
+.bouttons li a {
+    text-decoration: none;
+    color: #000063;
+    font-size: 45px;
+    background-color: #fff;
+
+    margin-left: 30px;
+    padding: 23px 77px;
+    border-radius: 50px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+}
+
+.bouttons li:first-child a {
+    margin: 0;
+}
+
+.bouttons a:hover {
+    background-color: #000063;
+    color: #fff;
+    border: 1px solid #000063;
+}
+
+#Quit {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+#Quit:hover {
+    border: 1px solid #000063;
+    color: #000063;
+}

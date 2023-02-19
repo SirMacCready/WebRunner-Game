@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 45px;
+    user-select: none;
+}
+
+h1 {
+    font-family: "video";
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+body {
+    background-image: url("../assets/background/home.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin-top: 100px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin-top: 16px;
+
+}
+
+.introduction {
+    line-height: 1.5;
+}
+
+img {
+    width: 48px;
+}
+
+.boutton {
+    position: absolute;
+    bottom: 88px;
+    right: 100px;
+}
+
+.boutton a {
+    position: static;
+    text-decoration: none;
+    color: #000063;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-left: 700px;
+    justify-content: center;
+    padding: 23px 77px;
+    border-radius: 50px;
+}
+
+.boutton a:hover {
+    background-color: #000063;
+    color: #fff;
+}

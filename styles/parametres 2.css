@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    color: #fff;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    user-select: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+h1 {
+    font-family: "video";
+    font-weight: 500;
+    font-size: 90px;
+    text-transform: uppercase;
+}
+
+body {
+    background-image: url("../assets/background/home.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 56px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tk-video {
+    font-family: "video", serif;
+}
+
+.son {
+    display: flex;
+    justify-content: baseline;
+    width: 780px;
+}
+
+.son p {
+    margin-right: 320px;
+}
+
+.pause {
+    margin-bottom: 100px;
+}
+
+.commandes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: baseline; */
+    width: 100%;
+}
+
+form>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 12px 0;
+}
+
+form>div>p {
+    white-space: nowrap;
+    margin-right: 12px;
+}
+
+form>div>input {
+    border: white 1px solid;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.488);
+}
+
+.boutton {
+    position: absolute;
+    bottom: 88px;
+    right: 100px;
+}
+
+.boutton a {
+    position: relative;
+    text-decoration: none;
+    color: #000063;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    background-color: #fff;
+    justify-content: center;
+    padding: 23px 77px;
+    border-radius: 50px;
+}
+
+
+.boutton a:hover {
+    background-color: #000063;
+    color: #fff;
+}
+
+input {
+    color: #000063;
+}

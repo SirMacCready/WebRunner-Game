@@ -1,5 +1,4 @@
 function difficulty1(speed) {
-  speed = 60;
   let style = document.createElement('style');
   style.type = 'text/css';
 
@@ -44,18 +43,20 @@ function difficulty1(speed) {
 }
 
 function setDifficulty(data) {
+      let speed;
       level = data.difficulty 
       console.log(data.difficulty);
-      if (level == 1) {
+      if (level === 1) {
         speed = 60
-      } else if (level == 2) {
+      } else if (level === 2) {
         speed = 55
-      } else if(level == 3) {
+      } else if(level === 3) {
         speed = 50
-      } else if(level == 4) {
+      } else if(level === 4) {
         speed = 45
-      } else if(level == 5) {
+      } else if(level === 5) {
         speed = 40
       }
+      console.log(speed)
     difficulty1(speed)
 }

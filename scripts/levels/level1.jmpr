@@ -328,7 +328,7 @@
       "type": "A"
     },
     {
-      "type": "C"
+      "type": "B"
     },
     {
       "type": "A"
@@ -403,7 +403,7 @@
       "type": "A"
     },
     {
-      "type": "B"
+      "type": "A"
     },
     {
       "type": "A"

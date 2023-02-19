@@ -1,0 +1,40 @@
+.menu {
+  width: auto;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+.options,
+.addMenu,
+.editMenu {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.481);
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: Video, monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+.option,
+.add1,
+.edit1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.right-arrow {
+  width: 8px;
+}
+
+p {
+  cursor: pointer;
+  padding: 8px;
+}
